@@ -32,8 +32,14 @@ https://github.com/IHM-2024-2025/NewVPN-App.git
 1. Arriba izquierda, Ir al icono de commits.
 2. Añadir un comentario al commit.
 3. Hacer clic en el botón de `commit and push` para subir los cambios directamente.
+4. Crear un token en `https://github.com/settings/personal-access-tokens/new`
+5. Elegir los permisos de la 2º imagen de este apartado.
+6. Copiar el token generado y volver a Android Studio.
+7. Darle clic al botón de `Login with Token` y pegar el token.
 
 ![Commit](assets/commit.png)
+
+![Token](assets/token.png)
 
 ## Traer cambios de otros a local
 
