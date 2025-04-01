@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NewVPN App</string>
+    <string name="app_title">NewVPN</string>
+    <string name="creater1">José Gallardo</string>
+    <string name="creater2">Tatiana Bejenaru</string>
+    <string name="creater3">Laura Rodríguez</string>
+    <string name="creater4">Eva Tamayo</string>
 </resources>
