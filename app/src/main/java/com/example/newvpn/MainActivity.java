@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.newvpn.session.Login;
+import com.example.newvpn.session.LoginPage;
 import com.example.newvpn.utils.ButtonsNavigation;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         // Delay in milliseconds
         int delay = 3000;
         new Handler(Looper.getMainLooper()).postDelayed(
-            () -> ButtonsNavigation.navigateTo(MainActivity.this, Login.class),
+            () -> ButtonsNavigation.navigateTo(MainActivity.this, LoginPage.class),
             delay
         );
     }
