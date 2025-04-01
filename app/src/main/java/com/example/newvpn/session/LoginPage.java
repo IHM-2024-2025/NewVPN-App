@@ -4,7 +4,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.newvpn.R;
 
-public class Login extends AppCompatActivity {
+public class LoginPage extends AppCompatActivity {
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
