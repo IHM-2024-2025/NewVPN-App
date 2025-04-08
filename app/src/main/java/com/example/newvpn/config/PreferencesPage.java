@@ -16,6 +16,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.example.newvpn.R;
 import com.example.newvpn.utils.ButtonsNavigation;
 import com.example.newvpn.utils.HeaderHelper;
+import com.example.newvpn.utils.MenuHelper;
 
 public class PreferencesPage extends AppCompatActivity {
 
@@ -28,6 +29,7 @@ public class PreferencesPage extends AppCompatActivity {
     private float fontScale = 1.0f;
     private static final float FONT_SCALE_STEP = 0.1f;
     private View headerView;
+    private View menuView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,9 @@ public class PreferencesPage extends AppCompatActivity {
         
         // Inyectar el header y establecer el título
         headerView = HeaderHelper.injectHeader(this, R.id.header_container, getString(R.string.config_title));
+        
+        // Inyectar el menú de navegación
+        menuView = MenuHelper.injectMenu(this, R.id.menu_container);
         
         initializeViews();
         setupListeners();
@@ -52,8 +57,6 @@ public class PreferencesPage extends AppCompatActivity {
         // Inicializar el switch con el modo actual
         darkModeSwitch.setChecked(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES);
     }
-    
-    // ... resto del código existente ...
     
     private void setupListeners() {
         // Conexión - navega a la página de conexión
@@ -91,7 +94,7 @@ public class PreferencesPage extends AppCompatActivity {
         
         // Invitar a un amigo - copia URL al portapapeles
         inviteFriendLayout.setOnClickListener(v -> {
-            copyToClipboard("https://joseleelportfolio.vercel.app");
+            copyToClipboard();
             Toast.makeText(this, "URL copiada al portapapeles", Toast.LENGTH_SHORT).show();
         });
     }
@@ -112,9 +115,9 @@ public class PreferencesPage extends AppCompatActivity {
         recreate(); // Recrear la actividad para reflejar los cambios
     }
     
-    private void copyToClipboard(String text) {
+    private void copyToClipboard() {
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText("Enlace de invitación", text);
+        ClipData clip = ClipData.newPlainText("Enlace de invitación", "https://joseleelportfolio.vercel.app");
         clipboard.setPrimaryClip(clip);
     }
 }
