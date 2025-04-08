@@ -8,7 +8,7 @@ Aplicación móvil de VPN. Práctica de Interacción Hombre-Máquina 2024/2025.
 - [Subir cambios](#subir-cambios)
 - [Traer cambios de otros a local](#traer-cambios-de-otros-a-local)
 - [Miembros del grupo](#miembros-del-grupo)
-- [Licencia](#licencia)
+- [Licencia](#Licencia)
 
 ## Instalación
 
