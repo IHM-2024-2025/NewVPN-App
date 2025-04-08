@@ -6,6 +6,15 @@
     <string name="creater2">Tatiana Bejenaru</string>
     <string name="creater3">Laura Rodríguez</string>
     <string name="creater4">Eva Tamayo</string>
+    <string name="loading_content">Cargando contenido...</string>
+    <string name="plantitle">Plantilla</string>
 
     <string name="config_title">Preferencias</string>
+    
+    <!-- Menú -->
+    <string name="menu_home">Inicio</string>
+    <string name="menu_countries">Países</string>
+    <string name="menu_account">Cuenta</string>
+    <string name="menu_settings">Ajustes</string>
+    <string name="welcome_message">¡Bienvenido a la página principal!</string>
 </resources>
