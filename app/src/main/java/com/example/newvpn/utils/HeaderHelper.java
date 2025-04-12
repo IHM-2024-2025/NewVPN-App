@@ -41,19 +41,4 @@ public class HeaderHelper {
         
         return headerView;
     }
-    
-    /**
-     * Actualiza el título del header.
-     * 
-     * @param headerView La vista del header
-     * @param title El nuevo título
-     */
-    public static void setHeaderTitle(View headerView, String title) {
-        if (headerView == null) return;
-        
-        TextView titleTextView = headerView.findViewById(R.id.tv_util_header_title);
-        if (titleTextView != null && title != null) {
-            titleTextView.setText(title);
-        }
-    }
 }

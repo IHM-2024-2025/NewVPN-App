@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.view.ViewGroup.MarginLayoutParams;
+import android.widget.Toast;
 
 import com.example.newvpn.app.AccountPage;
 import com.example.newvpn.app.CountriesPage;
@@ -58,25 +59,41 @@ public class MenuHelper {
         // Botón Home
         ImageView homeButton = menuView.findViewById(R.id.iv_util_menu_house);
         homeButton.setOnClickListener(v -> {
-            ButtonsNavigation.navigateTo(activity, MainPage.class);
+            if (activity instanceof MainPage) {
+                Toast.makeText(activity, "Ya estás en la página principal", Toast.LENGTH_SHORT).show();
+            } else {
+                ButtonsNavigation.navigateTo(activity, MainPage.class);
+            }
         });
         
         // Botón Países
         ImageView globeButton = menuView.findViewById(R.id.iv_util_menu_globe);
         globeButton.setOnClickListener(v -> {
-            ButtonsNavigation.navigateTo(activity, CountriesPage.class);
+            if (activity instanceof CountriesPage) {
+                Toast.makeText(activity, "Ya estás en la página de países", Toast.LENGTH_SHORT).show();
+            } else {
+                ButtonsNavigation.navigateTo(activity, CountriesPage.class);
+            }
         });
         
         // Botón Configuración
         ImageView settingsButton = menuView.findViewById(R.id.iv_util_menu_settings);
         settingsButton.setOnClickListener(v -> {
-            ButtonsNavigation.navigateTo(activity, PreferencesPage.class);
+            if (activity instanceof PreferencesPage) {
+                Toast.makeText(activity, "Ya estás en la página de configuración", Toast.LENGTH_SHORT).show();
+            } else {
+                ButtonsNavigation.navigateTo(activity, PreferencesPage.class);
+            }
         });
         
         // Botón Perfil
         ImageView profileButton = menuView.findViewById(R.id.iv_util_menu_profile);
         profileButton.setOnClickListener(v -> {
-            ButtonsNavigation.navigateTo(activity, AccountPage.class);
+            if (activity instanceof AccountPage) {
+                Toast.makeText(activity, "Ya estás en la página de perfil", Toast.LENGTH_SHORT).show();
+            } else {
+                ButtonsNavigation.navigateTo(activity, AccountPage.class);
+            }
         });
     }
 }
