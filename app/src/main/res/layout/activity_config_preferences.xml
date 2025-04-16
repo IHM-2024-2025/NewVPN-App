@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -42,7 +42,7 @@
                     android:id="@+id/tv_config_pref_connexion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Conexión"
+                    android:text="@string/connection"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -52,8 +52,8 @@
                     android:id="@+id/iv_config_pref_connexion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:rotation="180"
-                    android:src="@android:drawable/ic_media_play"
+                    android:src="@drawable/arrow_forward_24px"
+                    android:contentDescription="@string/arrow_forward"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -64,7 +64,8 @@
                 android:layout_height="1dp"
                 android:background="#EEEEEE" />
 
-            <!-- Modo oscuro -->
+            <!-- Se ha eliminado temporalmente el Modo oscuro -->
+            <!--
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
@@ -74,13 +75,13 @@
                     android:id="@+id/tv_config_pref_darkmode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Activar modo oscuro"
+                    android:text="@string/dark_mode"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <Switch
+                <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/switch_config_pref_darkmode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -93,6 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#EEEEEE" />
+            -->
 
             <!-- Tamaño de letra -->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -104,7 +106,7 @@
                     android:id="@+id/tv_config_pref_fonttam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tamaño de la letra"
+                    android:text="@string/font_size"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -124,16 +126,16 @@
                         android:layout_height="40dp"
                         android:layout_marginEnd="16dp"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Reducir tamaño"
-                        android:src="@android:drawable/ic_menu_search" />
+                        android:contentDescription="@string/reduce_size"
+                        android:src="@drawable/zoom_out_24px" />
 
                     <ImageButton
                         android:id="@+id/btn_font_increase"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Aumentar tamaño"
-                        android:src="@android:drawable/ic_menu_add" />
+                        android:contentDescription="@string/increase_size"
+                        android:src="@drawable/zoom_in_24px" />
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -144,15 +146,18 @@
 
             <!-- Seleccionar idioma -->
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_select_language"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:padding="16dp">
 
                 <TextView
                     android:id="@+id/tv_config_pref_select_language"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seleccionar idioma"
+                    android:text="@string/select_language"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -162,9 +167,44 @@
                     android:id="@+id/tv_current_language"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Español"
+                    android:text="@string/spanish"
                     android:textColor="#888888"
                     android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE" />
+
+            <!-- Notificaciones -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_notifications"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_config_pref_notifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notifications_label"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_config_pref_notifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/notifications_active_24px"
+                    android:contentDescription="@string/iv_decoration"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -189,7 +229,7 @@
                     android:id="@+id/tv_config_pref_perms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Permisos"
+                    android:text="@string/permissions"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -199,8 +239,8 @@
                     android:id="@+id/iv_config_pref_perms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:rotation="180"
-                    android:src="@android:drawable/ic_media_play"
+                    android:src="@drawable/arrow_forward_24px"
+                    android:contentDescription="@string/arrow_forward"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -225,7 +265,7 @@
                     android:id="@+id/tv_config_pref_affiliate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Invitar a un amigo"
+                    android:text="@string/invite_friend"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -236,6 +276,7 @@
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:src="@android:drawable/ic_menu_share"
+                    android:contentDescription="@string/share_icon"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -248,11 +289,11 @@
 
         </LinearLayout>
     </ScrollView>
+    <!-- Footer -->
 
-    <!-- Aquí se inyectará el menú -->
     <FrameLayout
         android:id="@+id/fl_mainpage_menu_container"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
