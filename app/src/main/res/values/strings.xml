@@ -6,15 +6,42 @@
     <string name="creater2">Tatiana Bejenaru</string>
     <string name="creater3">Laura Rodríguez</string>
     <string name="creater4">Eva Tamayo</string>
-    <string name="loading_content">Cargando contenido...</string>
+    <string name="loading_content">Cargando contenido…</string>
     <string name="plantitle">Plantilla</string>
-
     <string name="config_title">Preferencias</string>
-    
+
     <!-- Menú -->
     <string name="menu_home">Inicio</string>
     <string name="menu_countries">Países</string>
     <string name="menu_account">Cuenta</string>
     <string name="menu_settings">Ajustes</string>
     <string name="welcome_message">¡Bienvenido a la página principal!</string>
+
+    <string name="dark_mode_on">Modo oscuro activado</string>
+    <string name="dark_mode_off">Modo oscuro desactivado</string>
+    <string name="font_increase">Tamaño de letra aumentado</string>
+    <string name="font_decrease">Tamaño de letra reducido</string>
+    <string name="clipboard_url_copied">URL copiada al portapapeles</string>
+    <string name="not_implemented">Todavía no implementado…</string>
+    <string name="notifications_on">Notificaciones Activadas</string>
+    <string name="notifications_off">Notificaciones desactivadas</string>
+    <string name="notifications_label">Notificaciones</string>
+    <string name="select_language">Seleccionar idioma</string>
+    <string name="page_not_available">Página no disponible</string>
+
+    <string name="connection">Conexión</string>
+    <string name="dark_mode">Activar modo oscuro</string>
+    <string name="font_size">Tamaño de la letra</string>
+    <string name="reduce_size">Reducir tamaño</string>
+    <string name="increase_size">Aumentar tamaño</string>
+    <string name="spanish">Español</string>
+    <string name="permissions">Permisos</string>
+    <string name="invite_friend">Invitar a un amigo</string>
+    <string name="arrow_forward">Flecha derecha</string>
+    <string name="share_icon">Icono compartir</string>
+    <string name="font_max_reached">Tamaño máximo alcanzado</string>
+    <string name="font_min_reached">Tamaño mínimo alcanzado</string>
+
+    <string name="connexion_title">Conexión</string>
+    <string name="permissions_title">Permisos</string>
 </resources>
