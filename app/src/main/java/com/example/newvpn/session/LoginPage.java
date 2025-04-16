@@ -6,7 +6,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.newvpn.R;
 import com.example.newvpn.app.MainPage;
-import com.example.newvpn.config.PreferencesPage;
 import com.example.newvpn.utils.ButtonsNavigation;
 
 public class LoginPage extends AppCompatActivity {
@@ -24,7 +23,7 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navegar a MainPage al hacer clic en el botón
-                ButtonsNavigation.navigateTo(LoginPage.this, PreferencesPage.class);
+                ButtonsNavigation.navigateTo(LoginPage.this, MainPage.class);
             }
         });
     }
