@@ -114,25 +114,28 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal"
+                    android:gravity="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageButton
                         android:id="@+id/btn_font_decrease"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
                         android:layout_marginEnd="16dp"
+                        android:padding="8dp"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:contentDescription="@string/reduce_size"
                         android:src="@drawable/zoom_out_24px" />
 
                     <ImageButton
                         android:id="@+id/btn_font_increase"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:padding="8dp"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:contentDescription="@string/increase_size"
                         android:src="@drawable/zoom_in_24px" />
@@ -149,6 +152,7 @@
                 android:id="@+id/cl_select_language"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"
                 android:padding="16dp">
@@ -185,6 +189,7 @@
                 android:id="@+id/cl_notifications"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"
                 android:padding="16dp">
@@ -275,7 +280,7 @@
                     android:id="@+id/iv_config_pref_affiliate"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:src="@android:drawable/ic_menu_share"
+                    android:src="@drawable/share_24px"
                     android:contentDescription="@string/share_icon"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
