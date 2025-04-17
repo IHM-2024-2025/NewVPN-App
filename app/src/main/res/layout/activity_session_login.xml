@@ -6,10 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".session.LoginPage">
 
+    <FrameLayout
+        android:id="@+id/fl_login_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/iv_session_login_bg"
         android:layout_width="0dp"
         android:layout_height="470dp"
+        android:contentDescription="@string/iv_decoration"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -17,19 +27,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/color_pink_ffc2f4" />
-
-    <ImageView
-        android:id="@+id/iv_session_login_logo"
-        android:layout_width="80dp"
-        android:layout_height="93dp"
-        android:contentDescription="@string/iv_decoration"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/tv_session_login_email"
@@ -57,19 +54,6 @@
         app:layout_constraintVertical_bias="0.378" />
 
     <TextView
-        android:id="@+id/tv_session_login_title"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:text="@string/app_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/iv_session_login_logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/iv_session_login_bg"
-        app:layout_constraintVertical_bias="0.033" />
-
-    <TextView
         android:id="@+id/tv_session_login_forgotpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -81,7 +65,7 @@
         app:layout_constraintVertical_bias="0.951" />
 
     <TextView
-        android:id="@+id/tv_session_login_register2"
+        android:id="@+id/tv_session_login_goto_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registrate"
