@@ -16,7 +16,7 @@
         android:id="@+id/tv_mainpage_upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Subir"
+        android:text="@string/upload"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintStart_toStartOf="@+id/tv_mainpage_upload_num"
         app:layout_constraintTop_toBottomOf="@+id/tv_mainpage_upload_num" />
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:text="33.3"
+        android:text="@string/speed_value"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="17sp"
         app:layout_constraintStart_toEndOf="@+id/iv_mainpage_upload"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="1dp"
-        android:text="KB/s"
+        android:text="@string/speed_units"
         app:layout_constraintStart_toEndOf="@+id/tv_mainpage_upload_num"
         app:layout_constraintTop_toTopOf="@+id/iv_mainpage_upload" />
 
@@ -49,6 +49,7 @@
         android:layout_marginStart="60dp"
         android:layout_marginBottom="116dp"
         android:rotation="90"
+        android:contentDescription="@string/download_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/right_arrow" />
@@ -59,7 +60,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
-        android:text="Bienvenido, "
+        android:text="@string/welcome_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +71,7 @@
         android:layout_width="197dp"
         android:layout_height="57dp"
         android:layout_marginStart="16dp"
-        android:text="[Nombre y apellidos]"
+        android:text="@string/welcome_user"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/tv_mainpage_welcome"
@@ -93,6 +94,7 @@
         android:layout_marginEnd="144dp"
         android:layout_marginBottom="116dp"
         android:rotation="270"
+        android:contentDescription="@string/upload_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/right_arrow" />
@@ -102,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:text="33.3"
+        android:text="@string/speed_value"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="17sp"
         app:layout_constraintStart_toEndOf="@+id/iv_mainpage_download"
@@ -114,7 +116,7 @@
         android:layout_height="18dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="1dp"
-        android:text="KB/s"
+        android:text="@string/speed_units"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintStart_toEndOf="@+id/tv_mainpage_download_num"
         app:layout_constraintTop_toTopOf="@+id/tv_mainpage_download_num" />
@@ -123,7 +125,7 @@
         android:id="@+id/tv_mainpage_download"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Descargar"
+        android:text="@string/download"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintStart_toStartOf="@+id/tv_mainpage_download_num"
         app:layout_constraintTop_toBottomOf="@+id/tv_mainpage_download_num" />
