@@ -79,4 +79,19 @@
     <string name="login_no_account">¿No tienes cuenta?</string>
     <string name="login_register">Registrate</string>
     <string name="login_background">Fondo de la pantalla de inicio de sesión</string>
+
+    <!-- Registro -->
+    <string name="register_name_label">Nombre</string>
+    <string name="register_name_default">Name</string>
+    <string name="register_surname_label">Apellidos</string>
+    <string name="register_email_label">Correo Electrónico</string>
+    <string name="register_phone_label">Teléfono</string>
+    <string name="register_country_label">País</string>
+    <string name="register_password_label">Contraseña</string>
+    <string name="register_confirm_password_label">Confirmar contraseña</string>
+    <string name="register_accept_terms">Acepto los </string>
+    <string name="register_terms_and_conditions">Términos y condiciones de uso</string>
+    <string name="register_button">Registrarse</string>
+    <string name="register_account_exists">¿Ya tienes cuenta?</string>
+    <string name="register_goto_login">Inicio de sesión</string>
 </resources>
