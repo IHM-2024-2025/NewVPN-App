@@ -70,4 +70,13 @@
     <string name="info_phone_number">947 25 87 00</string>
     <string name="info_send_message">Enviar Mensaje</string>
     <string name="info_connect">Conectar</string>
+
+    <!-- Inicio de sesión -->
+    <string name="login_email_label">Correo electrónico</string>
+    <string name="login_password_label">Contraseña</string>
+    <string name="login_forgot_password">He olvidado mi contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="login_no_account">¿No tienes cuenta?</string>
+    <string name="login_register">Registrate</string>
+    <string name="login_background">Fondo de la pantalla de inicio de sesión</string>
 </resources>
