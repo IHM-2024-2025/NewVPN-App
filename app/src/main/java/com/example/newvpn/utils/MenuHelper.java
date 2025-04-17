@@ -18,15 +18,14 @@ public class MenuHelper {
     
     /**
      * Inyecta el menú de navegación en una actividad.
-     * 
-     * @param activity La actividad donde se inyectará el menú
+     *
+     * @param activity    La actividad donde se inyectará el menú
      * @param containerId El ID del contenedor donde se colocará el menú
-     * @return La vista del menú inyectado
      */
-    public static View injectMenu(Activity activity, int containerId) {
+    public static void injectMenu(Activity activity, int containerId) {
         FrameLayout container = activity.findViewById(containerId);
         if (container == null) {
-            return null;
+            return;
         }
         
         // Inflar el layout del menú
@@ -45,8 +44,7 @@ public class MenuHelper {
         // Añadir el menú al contenedor
         container.removeAllViews();
         container.addView(menuView);
-        
-        return menuView;
+
     }
     
     /**

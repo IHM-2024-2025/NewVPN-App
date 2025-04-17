@@ -7,8 +7,10 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.newvpn.R;
+import com.example.newvpn.app.MainPage;
 
 public class HeaderHelper {
     
@@ -24,21 +26,24 @@ public class HeaderHelper {
         if (container == null) {
             return;
         }
-        
+
         // Inflar el layout del header
         View headerView = LayoutInflater.from(activity).inflate(
                 R.layout.util_app_header, container, false);
-        
+
         // Establecer el título
         TextView titleTextView = headerView.findViewById(R.id.tv_util_header_title);
         if (titleTextView != null && title != null) {
             titleTextView.setText(title);
         }
-        
+
+        // Configurar el listener de navegación para el logo
+        ImageView logoImageView = headerView.findViewById(R.id.iv_util_header_logo);
+        setupLogoNavigation(activity, logoImageView);
+
         // Añadir el header al contenedor
         container.removeAllViews();
         container.addView(headerView);
-
     }
 
     /**
@@ -67,8 +72,29 @@ public class HeaderHelper {
         params.gravity = Gravity.TOP | Gravity.END;
         logoImageView.setLayoutParams(params);
 
+        // Configurar el listener de navegación para el logo
+        setupLogoNavigation(activity, logoImageView);
+
         // Añadir el logo al contenedor
         container.removeAllViews();
         container.addView(logoImageView);
+    }
+
+    /**
+     * Configura el listener de navegación para el logo del header.
+     *
+     * @param activity La actividad actual
+     * @param logoImageView La vista del logo
+     */
+    private static void setupLogoNavigation(Activity activity, ImageView logoImageView) {
+        if (logoImageView != null) {
+            logoImageView.setOnClickListener(v -> {
+                if (activity instanceof MainPage) {
+                    Toast.makeText(activity, "Ya estás en la página principal", Toast.LENGTH_SHORT).show();
+                } else {
+                    ButtonsNavigation.navigateTo(activity, MainPage.class);
+                }
+            });
+        }
     }
 }
