@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,7 +8,7 @@
         android:id="@+id/tv_info_email"
         android:layout_width="91dp"
         android:layout_height="33dp"
-        android:text="Email:"
+        android:text="@string/info_email_label"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +21,7 @@
         android:id="@+id/tv_info_email_form"
         android:layout_width="91dp"
         android:layout_height="33dp"
-        android:text="Email:"
+        android:text="@string/info_email_label"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +34,7 @@
         android:id="@+id/tv_info_chat"
         android:layout_width="94dp"
         android:layout_height="37dp"
-        android:text=" Chat en vivo:"
+        android:text="@string/info_chat_label"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +47,7 @@
         android:id="@+id/tv_info_telf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Teléfono:"
+        android:text="@string/info_phone_label"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +60,7 @@
         android:id="@+id/tv_info_faq"
         android:layout_width="229dp"
         android:layout_height="44dp"
-        android:text="Preguntas Frecuentes(FAQ):"
+        android:text="@string/info_faq_label"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +73,7 @@
         android:id="@+id/tv_info_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Formulario de contacto:"
+        android:text="@string/info_contact_form_label"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +86,7 @@
         android:id="@+id/tv_info_name_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nombre:"
+        android:text="@string/info_name_label"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,7 +99,7 @@
         android:id="@+id/tv_info_description_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mensaje o descripción del problema:"
+        android:text="@string/info_description_label"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,9 +126,11 @@
         android:id="@+id/tv_info_contact_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="newVPNsupport@ubu.es"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="215dp" />
+        android:text="@string/info_contact_email"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_info_email"
+        app:layout_constraintStart_toEndOf="@+id/tv_info_email"
+        app:layout_constraintTop_toTopOf="@+id/tv_info_email"
+        android:layout_marginStart="16dp" />
 
     <EditText
         android:id="@+id/et_info_name_form"
@@ -137,7 +138,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:text="@string/info_name_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.547"
@@ -149,15 +150,17 @@
         android:id="@+id/tv_info_telf_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="947 25 87 00"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="306dp" />
+        android:text="@string/info_phone_number"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_info_telf"
+        app:layout_constraintStart_toEndOf="@+id/tv_info_telf"
+        app:layout_constraintTop_toTopOf="@+id/tv_info_telf"
+        android:layout_marginStart="16dp" />
 
     <Button
         android:id="@+id/bt_info_send_message"
         android:layout_width="144dp"
         android:layout_height="66dp"
-        android:text="Enviar Mensaje"
+        android:text="@string/info_send_message"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.411"
@@ -170,11 +173,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#2196F3"
-        android:text="Conectar"
+        android:text="@string/info_connect"
         app:iconTint="#C31515"
         app:rippleColor="#2196F3"
         app:strokeColor="#B81B1B"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="246dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/tv_info_chat"
+        app:layout_constraintStart_toEndOf="@+id/tv_info_chat"
+        app:layout_constraintTop_toTopOf="@+id/tv_info_chat"
+        android:layout_marginStart="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

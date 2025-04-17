@@ -56,4 +56,18 @@
     <string name="share_icon">Icono compartir</string>
     <string name="font_max_reached">Tamaño máximo alcanzado</string>
     <string name="font_min_reached">Tamaño mínimo alcanzado</string>
+
+    <!-- Información de contacto -->
+    <string name="info_email_label">Email:</string>
+    <string name="info_chat_label">Chat en vivo:</string>
+    <string name="info_phone_label">Teléfono:</string>
+    <string name="info_faq_label">Preguntas Frecuentes(FAQ):</string>
+    <string name="info_contact_form_label">Formulario de contacto:</string>
+    <string name="info_name_label">Nombre:</string>
+    <string name="info_description_label">Mensaje o descripción del problema:</string>
+    <string name="info_contact_email">newVPNsupport@ubu.es</string>
+    <string name="info_name_default">Name</string>
+    <string name="info_phone_number">947 25 87 00</string>
+    <string name="info_send_message">Enviar Mensaje</string>
+    <string name="info_connect">Conectar</string>
 </resources>
