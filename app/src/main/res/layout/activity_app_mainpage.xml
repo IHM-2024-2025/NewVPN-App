@@ -52,7 +52,7 @@
         android:contentDescription="@string/download_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/right_arrow" />
+        app:srcCompat="@drawable/mainpage_right_arrow" />
 
     <TextView
         android:id="@+id/tv_mainpage_welcome"
@@ -97,7 +97,7 @@
         android:contentDescription="@string/upload_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/right_arrow" />
+        app:srcCompat="@drawable/mainpage_right_arrow" />
 
     <TextView
         android:id="@+id/tv_mainpage_download_num"

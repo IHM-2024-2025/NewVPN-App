@@ -91,7 +91,7 @@ public class PreferencesPage extends AppCompatActivity {
             // Listener para Notificaciones
             notificationsLayout.setOnClickListener(v -> {
                 notificationsEnabled = !notificationsEnabled;
-                notificationsIcon.setImageResource(notificationsEnabled ? R.drawable.notifications_active_24px : R.drawable.notifications_off_24px);
+                notificationsIcon.setImageResource(notificationsEnabled ? R.drawable.util_notifications_active_24px : R.drawable.util_notifications_off_24px);
                 Toast.makeText(this, notificationsEnabled ? getString(R.string.notifications_on) : getString(R.string.notifications_off), Toast.LENGTH_SHORT).show();
             });
         } catch (Exception e) {

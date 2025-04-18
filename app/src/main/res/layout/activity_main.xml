@@ -85,7 +85,7 @@
         android:id="@+id/pb_main_loading"
         android:layout_width="128dp"
         android:layout_height="128dp"
-        android:indeterminateDrawable="@drawable/loading_spinner"
+        android:indeterminateDrawable="@drawable/util_loading_spinner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

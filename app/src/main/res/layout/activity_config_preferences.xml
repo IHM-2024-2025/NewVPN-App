@@ -52,7 +52,7 @@
                     android:id="@+id/iv_config_pref_connexion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/arrow_forward_24px"
+                    android:src="@drawable/util_arrow_forward_24px"
                     android:contentDescription="@string/arrow_forward"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +129,7 @@
                         android:padding="8dp"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:contentDescription="@string/reduce_size"
-                        android:src="@drawable/zoom_out_24px" />
+                        android:src="@drawable/util_zoom_out_24px" />
 
                     <ImageButton
                         android:id="@+id/btn_font_increase"
@@ -138,7 +138,7 @@
                         android:padding="8dp"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:contentDescription="@string/increase_size"
-                        android:src="@drawable/zoom_in_24px" />
+                        android:src="@drawable/util_zoom_in_24px" />
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -208,7 +208,7 @@
                     android:id="@+id/iv_config_pref_notifications"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/notifications_active_24px"
+                    android:src="@drawable/util_notifications_active_24px"
                     android:contentDescription="@string/iv_decoration"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -244,7 +244,7 @@
                     android:id="@+id/iv_config_pref_perms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/arrow_forward_24px"
+                    android:src="@drawable/util_arrow_forward_24px"
                     android:contentDescription="@string/arrow_forward"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -280,7 +280,7 @@
                     android:id="@+id/iv_config_pref_affiliate"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:src="@drawable/share_24px"
+                    android:src="@drawable/util_share_24px"
                     android:contentDescription="@string/share_icon"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
