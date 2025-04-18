@@ -94,4 +94,27 @@
     <string name="register_button">Registrarse</string>
     <string name="register_account_exists">¿Ya tienes cuenta?</string>
     <string name="register_goto_login">Inicio de sesión</string>
+
+    <!-- Conexión VPN -->
+    <string name="connection_type">Tipo de conexión</string>
+    <string name="connection_auto">Automático</string>
+    <string name="connection_manual">Manual</string>
+    <string name="dns_private">DNS Privado</string>
+    <string name="dns_example">Ejemplo: 8.8.8.8</string>
+    <string name="ad_blocker">Bloqueo de publicidad</string>
+    <string name="tracker_blocker">Bloqueo de rastreadores</string>
+    <string name="split_routing">Split Routing</string>
+    <string name="split_routing_info">Información sobre Split Routing</string>
+    <string name="split_routing_title">Split Routing</string>
+    <string name="split_routing_message">Split Routing permite seleccionar qué aplicaciones se conectan a través de la VPN y cuáles utilizan tu conexión normal a internet. Esto puede ser útil para aplicaciones que requieren acceso a servicios locales. Si está desactivado, todas las aplicaciones utilizarán la conexión de la VPN. Si está activado, solamente las aplicaciones que actives utilizarán la conexión de la VPN.</string>
+    <string name="understood">Entendido</string>
+    <string name="split_routing_apps">Aplicaciones para Split Routing</string>
+    <string name="app_icon">Icono de la aplicación</string>
+
+    <!-- Separadores -->
+    <string name="divider">Separador</string>
+
+    <!-- Botones de Split Routing -->
+    <string name="save_configuration">Guardar configuración</string>
+    <string name="config_saved">Configuración guardada</string>
 </resources>
