@@ -1,75 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/iv_session_register_bg"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <FrameLayout
+        android:id="@+id/fl_register_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/rosa_ffc2f4" />
-
-    <TextView
-        android:id="@+id/tv_session_register_title"
-        android:layout_width="163dp"
-        android:layout_height="60dp"
-        android:text="NEW VPN"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/iv_session_register_bg"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.018" />
-
-    <ImageView
-        android:id="@+id/iv_session_register_logo"
-        android:layout_width="103dp"
-        android:layout_height="105dp"
-        android:layout_marginStart="211dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_session_register_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="277dp"
-        android:text="Nombre"
+        android:layout_marginTop="99dp"
+        android:labelFor="@id/pt_session_register_name"
+        android:text="@string/register_name_label"
         android:textAllCaps="false"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/pt_session_register_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_session_register_title" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/pt_session_register_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:layout_marginEnd="140dp"
+        android:autofillHints="name"
         android:ems="10"
+        android:hint="@string/register_name_label"
         android:inputType="text"
-        android:text="Name"
+        android:text="@string/register_name_default"
         app:layout_constraintBottom_toTopOf="@+id/tv_session_register_surname"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_session_register_name" />
 
@@ -78,11 +45,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:text="Apellidos"
+        android:labelFor="@id/pt_session_register_surname"
+        android:text="@string/register_surname_label"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/pt_session_register_surname"
-        app:layout_constraintEnd_toStartOf="@+id/pt_session_register_surname"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pt_session_register_name" />
 
@@ -91,12 +57,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
+        android:autofillHints="familyName"
         android:ems="10"
+        android:hint="@string/register_surname_label"
         android:inputType="text"
-        android:text="Name"
+        android:text="@string/register_name_default"
         app:layout_constraintBottom_toTopOf="@+id/tv_session_register_email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.007"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_session_register_surname" />
 
@@ -105,11 +71,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:text="Correo Electrónico"
+        android:labelFor="@id/pt_session_register_email"
+        android:text="@string/register_email_label"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/pt_session_register_email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pt_session_register_surname" />
 
@@ -118,11 +83,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:layout_marginEnd="140dp"
+        android:autofillHints="emailAddress"
         android:ems="10"
+        android:hint="@string/register_email_label"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/tv_session_register_tlf"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_session_register_email" />
 
@@ -131,11 +96,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:text="Teléfono"
+        android:labelFor="@id/pt_session_register_tlf"
+        android:text="@string/register_phone_label"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/pt_session_register_tlf"
-        app:layout_constraintEnd_toStartOf="@+id/pt_session_register_tlf"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pt_session_register_email" />
 
@@ -144,11 +108,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:layout_marginEnd="140dp"
+        android:autofillHints="phone"
         android:ems="10"
+        android:hint="@string/register_phone_label"
         android:inputType="phone"
         app:layout_constraintBottom_toTopOf="@+id/tv_session_register_country"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_session_register_tlf" />
 
@@ -157,11 +121,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:layout_marginEnd="310dp"
-        android:text="País"
+        android:labelFor="@id/pt_session_register_country"
+        android:text="@string/register_country_label"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/pt_session_register_country"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pt_session_register_tlf" />
 
@@ -170,12 +133,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:layout_marginEnd="140dp"
+        android:autofillHints="country"
         android:ems="10"
+        android:hint="@string/register_country_label"
         android:inputType="text"
-        android:text="Name"
+        android:text="@string/register_name_default"
         app:layout_constraintBottom_toTopOf="@+id/tv_session_register_password"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_session_register_country" />
 
@@ -184,12 +147,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:layout_marginEnd="240dp"
-        android:text="Contraseña"
+        android:labelFor="@id/pt_session_register_password"
+        android:text="@string/register_password_label"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/pt_session_register_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pt_session_register_country" />
 
@@ -198,11 +159,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:layout_marginEnd="140dp"
+        android:autofillHints="password"
         android:ems="10"
+        android:hint="@string/register_password_label"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/tv_session_register_confirmpassword"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_session_register_password" />
 
@@ -211,11 +172,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:layout_marginEnd="155dp"
-        android:text="Confirmar contraseña"
+        android:labelFor="@id/pt_session_register_confirmpassword"
+        android:text="@string/register_confirm_password_label"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/pt_session_register_confirmpassword"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pt_session_register_password" />
 
@@ -224,11 +184,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
-        android:layout_marginEnd="140dp"
+        android:autofillHints="password"
         android:ems="10"
+        android:hint="@string/register_confirm_password_label"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/cb_session_register_terms"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_session_register_confirmpassword" />
 
@@ -237,11 +197,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginEnd="246dp"
         android:layout_marginBottom="24dp"
-        android:text="Acepto los "
+        android:text="@string/register_accept_terms"
         app:layout_constraintBottom_toTopOf="@+id/bt_session_register_register"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pt_session_register_confirmpassword" />
 
@@ -253,7 +211,7 @@
         android:layout_marginTop="31dp"
         android:layout_marginEnd="95dp"
         android:layout_marginBottom="8dp"
-        android:text="Registrarse"
+        android:text="@string/register_button"
         app:layout_constraintBottom_toTopOf="@+id/tv_session_register_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -264,41 +222,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="93dp"
-        android:layout_marginEnd="202dp"
         android:layout_marginBottom="5dp"
-        android:text="¿Ya tienes cuenta?"
+        android:text="@string/register_account_exists"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_session_register_register" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_session_register_terms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:layout_marginTop="22dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="72dp"
-        android:text="Terminos y condiciones de uso"
+        android:text="@string/register_terms_and_conditions"
         app:layout_constraintBottom_toTopOf="@+id/bt_session_register_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/cb_session_register_terms"
         app:layout_constraintTop_toBottomOf="@+id/pt_session_register_confirmpassword"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_session_register_goto_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="91dp"
         android:layout_marginBottom="11dp"
-        android:text="Inico de sesión"
+        android:text="@string/register_goto_login"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_session_register_login"
         app:layout_constraintTop_toBottomOf="@+id/bt_session_register_register" />
 

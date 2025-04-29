@@ -1,11 +1,120 @@
 <resources>
+    <!-- Generales -->
     <string name="app_name">NewVPN App</string>
     <string name="app_title">NewVPN</string>
     <string name="iv_decoration">Esto es una imagen de decoración</string>
+    <string name="loading_content">Cargando contenido…</string>
+    <string name="plantitle">Plantilla</string>
+    <string name="not_implemented">Todavía no implementado…</string>
+    <string name="page_not_available">Página no disponible</string>
+
+    <!-- Autores -->
     <string name="creater1">José Gallardo</string>
     <string name="creater2">Tatiana Bejenaru</string>
     <string name="creater3">Laura Rodríguez</string>
     <string name="creater4">Eva Tamayo</string>
 
+    <!-- Menú de navegación -->
+    <string name="menu_home">Inicio</string>
+    <string name="menu_countries">Países</string>
+    <string name="menu_account">Cuenta</string>
+    <string name="menu_settings">Ajustes</string>
+
+    <!-- Página principal (MainPage) -->
+    <string name="welcome_message">¡Bienvenido a la página principal!</string>
+    <string name="welcome_text">Bienvenido, </string>
+    <string name="welcome_user">[Nombre y apellidos]</string>
+    <string name="upload">Subir</string>
+    <string name="download">Descargar</string>
+    <string name="speed_value">33.3</string>
+    <string name="speed_units">KB/s</string>
+    <string name="upload_icon">Icono de subida</string>
+    <string name="download_icon">Icono de descarga</string>
+
+    <!-- Ajustes (Settings) -->
     <string name="config_title">Preferencias</string>
+    <string name="dark_mode_on">Modo oscuro activado</string>
+    <string name="dark_mode_off">Modo oscuro desactivado</string>
+    <string name="font_increase">Tamaño de letra aumentado</string>
+    <string name="font_decrease">Tamaño de letra reducido</string>
+    <string name="clipboard_url_copied">URL copiada al portapapeles</string>
+    <string name="notifications_on">Notificaciones Activadas</string>
+    <string name="notifications_off">Notificaciones desactivadas</string>
+    <string name="notifications_label">Notificaciones</string>
+    <string name="select_language">Seleccionar idioma</string>
+    <string name="connection">Conexión</string>
+    <string name="connexion_title">Conexión</string>
+    <string name="dark_mode">Activar modo oscuro</string>
+    <string name="font_size">Tamaño de la letra</string>
+    <string name="reduce_size">Reducir tamaño</string>
+    <string name="increase_size">Aumentar tamaño</string>
+    <string name="spanish">Español</string>
+    <string name="permissions">Permisos</string>
+    <string name="permissions_title">Permisos</string>
+    <string name="invite_friend">Invitar a un amigo</string>
+    <string name="arrow_forward">Flecha derecha</string>
+    <string name="share_icon">Icono compartir</string>
+    <string name="font_max_reached">Tamaño máximo alcanzado</string>
+    <string name="font_min_reached">Tamaño mínimo alcanzado</string>
+
+    <!-- Información de contacto -->
+    <string name="info_email_label">Email:</string>
+    <string name="info_chat_label">Chat en vivo:</string>
+    <string name="info_phone_label">Teléfono:</string>
+    <string name="info_faq_label">Preguntas Frecuentes(FAQ):</string>
+    <string name="info_contact_form_label">Formulario de contacto:</string>
+    <string name="info_name_label">Nombre:</string>
+    <string name="info_description_label">Mensaje o descripción del problema:</string>
+    <string name="info_contact_email">newVPNsupport@ubu.es</string>
+    <string name="info_name_default">Name</string>
+    <string name="info_phone_number">947 25 87 00</string>
+    <string name="info_send_message">Enviar Mensaje</string>
+    <string name="info_connect">Conectar</string>
+
+    <!-- Inicio de sesión -->
+    <string name="login_email_label">Correo electrónico</string>
+    <string name="login_password_label">Contraseña</string>
+    <string name="login_forgot_password">He olvidado mi contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="login_no_account">¿No tienes cuenta?</string>
+    <string name="login_register">Registrate</string>
+    <string name="login_background">Fondo de la pantalla de inicio de sesión</string>
+
+    <!-- Registro -->
+    <string name="register_name_label">Nombre</string>
+    <string name="register_name_default">Name</string>
+    <string name="register_surname_label">Apellidos</string>
+    <string name="register_email_label">Correo Electrónico</string>
+    <string name="register_phone_label">Teléfono</string>
+    <string name="register_country_label">País</string>
+    <string name="register_password_label">Contraseña</string>
+    <string name="register_confirm_password_label">Confirmar contraseña</string>
+    <string name="register_accept_terms">Acepto los </string>
+    <string name="register_terms_and_conditions">Términos y condiciones de uso</string>
+    <string name="register_button">Registrarse</string>
+    <string name="register_account_exists">¿Ya tienes cuenta?</string>
+    <string name="register_goto_login">Inicio de sesión</string>
+
+    <!-- Conexión VPN -->
+    <string name="connection_type">Tipo de conexión</string>
+    <string name="connection_auto">Automático</string>
+    <string name="connection_manual">Manual</string>
+    <string name="dns_private">DNS Privado</string>
+    <string name="dns_example">Ejemplo: 8.8.8.8</string>
+    <string name="ad_blocker">Bloqueo de publicidad</string>
+    <string name="tracker_blocker">Bloqueo de rastreadores</string>
+    <string name="split_routing">Split Routing</string>
+    <string name="split_routing_info">Información sobre Split Routing</string>
+    <string name="split_routing_title">Split Routing</string>
+    <string name="split_routing_message">Split Routing permite seleccionar qué aplicaciones se conectan a través de la VPN y cuáles utilizan tu conexión normal a internet. Esto puede ser útil para aplicaciones que requieren acceso a servicios locales. Si está desactivado, todas las aplicaciones utilizarán la conexión de la VPN. Si está activado, solamente las aplicaciones que actives utilizarán la conexión de la VPN.</string>
+    <string name="understood">Entendido</string>
+    <string name="split_routing_apps">Aplicaciones para Split Routing</string>
+    <string name="app_icon">Icono de la aplicación</string>
+
+    <!-- Separadores -->
+    <string name="divider">Separador</string>
+
+    <!-- Botones de Split Routing -->
+    <string name="save_configuration">Guardar configuración</string>
+    <string name="config_saved">Configuración guardada</string>
 </resources>
