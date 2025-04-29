@@ -117,4 +117,48 @@
     <!-- Botones de Split Routing -->
     <string name="save_configuration">Guardar configuración</string>
     <string name="config_saved">Configuración guardada</string>
+
+    <!-- Página de pago -->
+    <string name="pay_title">Suscribirse</string>
+    <string name="pay_subtitle">Seleccione su método de pago</string>
+    <string name="pay_card_button">Tarjeta de crédito/débito</string>
+    <string name="pay_paypal_button">PayPal</string>
+    <string name="pay_card_number">Número de tarjeta</string>
+    <string name="pay_card_name">Nombre del titular</string>
+    <string name="pay_card_expiry">Fecha de caducidad</string>
+    <string name="pay_card_cvv">CVV</string>
+    <string name="pay_paypal_email">Correo electrónico de PayPal</string>
+    <string name="pay_paypal_password">Contraseña de PayPal</string>
+    <string name="pay_button">Realizar pago</string>
+    <string name="pay_confirm_title">Confirmar pago</string>
+    <string name="pay_confirm_message">¿Está seguro que desea realizar el pago?</string>
+    <string name="pay_confirm_yes">Sí, pagar ahora</string>
+    <string name="pay_confirm_no">Cancelar</string>
+    <string name="pay_success">Pago realizado con éxito</string>
+    <string name="pay_error">Error al procesar el pago</string>
+    <string name="pay_monthly">Plan Mensual</string>
+    <string name="pay_yearly">Plan Anual</string>
+    <string name="pay_price_monthly">4,99€/mes</string>
+    <string name="pay_price_yearly">49,99€/año</string>
+    <string name="pay_save">Ahorra 20%</string>
+    <string name="pay_processing">Procesando pago…</string>
+    <string name="pay_card_label">Tarjeta de crédito</string>
+    <string name="pay_paypal_label">PayPal</string>
+    <string name="pay_error_card_number">Número de tarjeta inválido</string>
+    <string name="pay_error_card_name">Nombre del titular requerido</string>
+    <string name="pay_error_card_expiry">Formato fecha inválido. Use MM/AA</string>
+    <string name="pay_error_card_cvv">CVV inválido</string>
+    <string name="pay_error_paypal_email">Email de PayPal inválido</string>
+    <string name="pay_error_paypal_password">Contraseña requerida</string>
+    <string name="pay_confirm_plan">Plan:</string>
+    <string name="pay_confirm_method">Método de pago:</string>
+    <string name="pay_confirm_amount">Importe total:</string>
+    <string name="pay_success_title">¡Pago completado!</string>
+    <string name="pay_success_message">Su suscripción ha sido activada correctamente. Disfrute de todas las ventajas premium.</string>
+    <string name="pay_success_ok">Continuar</string>
+    <string name="pay_error_title">Error en el pago</string>
+    <string name="pay_error_generic">No se pudo procesar el pago</string>
+    <string name="pay_error_ok">Intentar de nuevo</string>
+    <string name="pay_card_icon_description">Icono de tarjeta de crédito</string>
+    <string name="pay_paypal_icon_description">Icono de PayPal</string>
 </resources>
