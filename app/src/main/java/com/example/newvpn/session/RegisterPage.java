@@ -22,26 +22,20 @@ public class RegisterPage extends AppCompatActivity {
         
         // Configurar el evento para ir a la pantalla de inicio de sesión
         TextView loginTextView = findViewById(R.id.tv_session_register_goto_login);
-        loginTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navegar a la pantalla de inicio de sesión
-                Intent intent = new Intent(RegisterPage.this, LoginPage.class);
-                startActivity(intent);
-                finish(); // Cerrar la actividad actual
-            }
+        loginTextView.setOnClickListener(v -> {
+            // Navegar a la pantalla de inicio de sesión
+            Intent intent = new Intent(RegisterPage.this, LoginPage.class);
+            startActivity(intent);
+            finish(); // Cerrar la actividad actual
         });
         
         // Configurar el botón de registro para redirigir a la página principal
         Button registerButton = findViewById(R.id.bt_session_register_register);
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navegar a la pantalla principal
-                Intent intent = new Intent(RegisterPage.this, MainPage.class);
-                startActivity(intent);
-                finish(); // Cerrar la actividad actual
-            }
+        registerButton.setOnClickListener(v -> {
+            // Navegar a la pantalla principal
+            Intent intent = new Intent(RegisterPage.this, MainPage.class);
+            startActivity(intent);
+            finish(); // Cerrar la actividad actual
         });
     }
 }

@@ -26,34 +26,25 @@ public class LoginPage extends AppCompatActivity {
         Button loginButton = findViewById(R.id.bt_session_login_login);
         
         // Agregar listener para el evento de clic
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navegar a MainPage al hacer clic en el botón
-                ButtonsNavigation.navigateTo(LoginPage.this, MainPage.class);
-            }
+        loginButton.setOnClickListener(v -> {
+            // Navegar a MainPage al hacer clic en el botón
+            ButtonsNavigation.navigateTo(LoginPage.this, MainPage.class);
         });
 
         // Encontrar el TextView de registro
         TextView registerTextView = findViewById(R.id.tv_session_login_goto_register);
 
         // Añadir listener para el evento de clic
-        registerTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navegar a RegisterPage al hacer clic en el TextView
-                ButtonsNavigation.navigateTo(LoginPage.this, RegisterPage.class);
-            }
+        registerTextView.setOnClickListener(v -> {
+            // Navegar a RegisterPage al hacer clic en el TextView
+            ButtonsNavigation.navigateTo(LoginPage.this, RegisterPage.class);
         });
 
         // Añadir listener para el texto "He olvidado mi contraseña"
         TextView forgotPasswordTextView = findViewById(R.id.tv_session_login_forgotpassword);
-        forgotPasswordTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Mostrar un Toast indicando que la función no está implementada
-                Toast.makeText(LoginPage.this, getString(R.string.not_implemented), Toast.LENGTH_SHORT).show();
-            }
+        forgotPasswordTextView.setOnClickListener(v -> {
+            // Mostrar un Toast indicando que la función no está implementada
+            Toast.makeText(LoginPage.this, getString(R.string.not_implemented), Toast.LENGTH_SHORT).show();
         });
     }
 }
