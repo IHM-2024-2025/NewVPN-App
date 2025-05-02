@@ -1,12 +1,12 @@
 package com.example.newvpn.config;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -21,20 +21,39 @@ import com.example.newvpn.utils.MenuHelper;
 
 public class PermissionsPage extends AppCompatActivity {
 
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
     private Switch switchContacts, switchLocation, switchMicrophone, switchCamera;
     
-    // Lanzadores para solicitar permisos
+    // Variables para simular el estado de permisos
+    private boolean simulatedContactsPermission;
+    private boolean simulatedLocationPermission;
+    private boolean simulatedMicrophonePermission;
+    private boolean simulatedCameraPermission;
+    
+    // Lanzadores para solicitar permisos con actualización de variables simuladas
     private final ActivityResultLauncher<String> requestContactsPermission = registerForActivityResult(
-            new ActivityResultContracts.RequestPermission(), isGranted -> handlePermissionResult(switchContacts, isGranted));
+            new ActivityResultContracts.RequestPermission(), isGranted -> {
+               simulatedContactsPermission = isGranted;
+               handlePermissionResult(switchContacts, isGranted);
+            });
             
     private final ActivityResultLauncher<String> requestLocationPermission = registerForActivityResult(
-            new ActivityResultContracts.RequestPermission(), isGranted -> handlePermissionResult(switchLocation, isGranted));
+            new ActivityResultContracts.RequestPermission(), isGranted -> {
+               simulatedLocationPermission = isGranted;
+               handlePermissionResult(switchLocation, isGranted);
+            });
             
     private final ActivityResultLauncher<String> requestMicrophonePermission = registerForActivityResult(
-            new ActivityResultContracts.RequestPermission(), isGranted -> handlePermissionResult(switchMicrophone, isGranted));
+            new ActivityResultContracts.RequestPermission(), isGranted -> {
+               simulatedMicrophonePermission = isGranted;
+               handlePermissionResult(switchMicrophone, isGranted);
+            });
             
     private final ActivityResultLauncher<String> requestCameraPermission = registerForActivityResult(
-            new ActivityResultContracts.RequestPermission(), isGranted -> handlePermissionResult(switchCamera, isGranted));
+            new ActivityResultContracts.RequestPermission(), isGranted -> {
+               simulatedCameraPermission = isGranted;
+               handlePermissionResult(switchCamera, isGranted);
+            });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +67,12 @@ public class PermissionsPage extends AppCompatActivity {
         switchLocation = findViewById(R.id.switch_location);
         switchMicrophone = findViewById(R.id.switch_microphone);
         switchCamera = findViewById(R.id.switch_camera);
+        
+        // Inicializar variables simuladas con el estado real inicial
+        simulatedContactsPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED;
+        simulatedLocationPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
+        simulatedMicrophonePermission = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED;
+        simulatedCameraPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
         
         // Configurar los estados iniciales de los switches
         updateSwitchStates();
@@ -102,18 +127,28 @@ public class PermissionsPage extends AppCompatActivity {
     }
     
     private void updateSwitchStates() {
-        // Actualiza el estado de los switches según los permisos actuales
-        switchContacts.setChecked(checkPermission(Manifest.permission.READ_CONTACTS));
-        switchLocation.setChecked(checkPermission(Manifest.permission.ACCESS_FINE_LOCATION));
-        switchMicrophone.setChecked(checkPermission(Manifest.permission.RECORD_AUDIO));
-        switchCamera.setChecked(checkPermission(Manifest.permission.CAMERA));
+        // Actualiza el estado de los switches según las variables simuladas
+        switchContacts.setChecked(simulatedContactsPermission);
+        switchLocation.setChecked(simulatedLocationPermission);
+        switchMicrophone.setChecked(simulatedMicrophonePermission);
+        switchCamera.setChecked(simulatedCameraPermission);
     }
     
     private boolean checkPermission(String permission) {
-        return ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED;
+        // Devuelve el estado simulado en lugar del permiso real
+        if (Manifest.permission.READ_CONTACTS.equals(permission)) {
+            return simulatedContactsPermission;
+        } else if (Manifest.permission.ACCESS_FINE_LOCATION.equals(permission)) {
+            return simulatedLocationPermission;
+        } else if (Manifest.permission.RECORD_AUDIO.equals(permission)) {
+            return simulatedMicrophonePermission;
+        } else if (Manifest.permission.CAMERA.equals(permission)) {
+            return simulatedCameraPermission;
+        }
+        return false;
     }
     
-    private void handlePermissionResult(Switch switchView, boolean isGranted) {
+    private void handlePermissionResult(@SuppressLint("UseSwitchCompatOrMaterialCode") Switch switchView, boolean isGranted) {
         if (isGranted) {
             Toast.makeText(this, R.string.permission_granted, Toast.LENGTH_SHORT).show();
         } else {
@@ -132,12 +167,19 @@ public class PermissionsPage extends AppCompatActivity {
         startActivity(intent);
     }
     
-    // Nuevo método para simular la revocación del permiso
-    private void revokePermission(String permission, Switch switchView) {
-        // En Android no se puede revocar un permiso de forma programática.
-        // Se simula la eliminación informando al usuario.
+    // Método para simular la revocación del permiso
+    private void revokePermission(String permission, @SuppressLint("UseSwitchCompatOrMaterialCode") Switch switchView) {
         Toast.makeText(this, "Permiso eliminado", Toast.LENGTH_SHORT).show();
-        // Actualizar el estado del switch
+        // Actualizar la variable simulada según el permiso revocado
+        if (Manifest.permission.READ_CONTACTS.equals(permission)) {
+            simulatedContactsPermission = false;
+        } else if (Manifest.permission.ACCESS_FINE_LOCATION.equals(permission)) {
+            simulatedLocationPermission = false;
+        } else if (Manifest.permission.RECORD_AUDIO.equals(permission)) {
+            simulatedMicrophonePermission = false;
+        } else if (Manifest.permission.CAMERA.equals(permission)) {
+            simulatedCameraPermission = false;
+        }
         switchView.setChecked(false);
     }
 }
