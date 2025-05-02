@@ -121,7 +121,7 @@
     <!-- Página de pago -->
     <string name="pay_title">Suscribirse</string>
     <string name="pay_subtitle">Seleccione su método de pago</string>
-    <string name="pay_card_button">Tarjeta de crédito/débito</string>
+    <string name="pay_card_button">Pago con Tarjeta</string>
     <string name="pay_paypal_button">PayPal</string>
     <string name="pay_card_number">Número de tarjeta</string>
     <string name="pay_card_name">Nombre del titular</string>
