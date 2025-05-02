@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.newvpn.R;
@@ -42,6 +43,16 @@ public class LoginPage extends AppCompatActivity {
             public void onClick(View v) {
                 // Navegar a RegisterPage al hacer clic en el TextView
                 ButtonsNavigation.navigateTo(LoginPage.this, RegisterPage.class);
+            }
+        });
+
+        // Añadir listener para el texto "He olvidado mi contraseña"
+        TextView forgotPasswordTextView = findViewById(R.id.tv_session_login_forgotpassword);
+        forgotPasswordTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Mostrar un Toast indicando que la función no está implementada
+                Toast.makeText(LoginPage.this, getString(R.string.not_implemented), Toast.LENGTH_SHORT).show();
             }
         });
     }
