@@ -27,44 +27,131 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="vertical">
             
-            <!-- Permiso: Acceso a contactos -->
-            <Switch
-                android:id="@+id/switch_contacts"
+            <!-- Permiso: Contactos -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_permission_contacts"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Acceso a contactos"
-                android:textSize="20sp"
-                android:padding="8dp" />
+                android:layout_height="70dp"
+                android:padding="16dp">
 
-            <!-- Permiso: Acceso a la ubicación -->
-            <Switch
-                android:id="@+id/switch_location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Acceso a la ubicación"
-                android:textSize="20sp"
-                android:padding="8dp" />
+                <TextView
+                    android:id="@+id/tv_permission_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/permission_contacts"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- Permiso: Acceso al micrófono -->
-            <Switch
-                android:id="@+id/switch_microphone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Acceso al micrófono"
-                android:textSize="20sp"
-                android:padding="8dp" />
+                <Switch
+                    android:id="@+id/switch_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Permiso: Acceso a la cámara -->
-            <Switch
-                android:id="@+id/switch_camera"
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Acceso a la cámara"
-                android:textSize="20sp"
-                android:padding="8dp" />
+                android:layout_height="1dp"
+                android:background="#EEEEEE" />
+
+            <!-- Permiso: Ubicación -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_permission_location"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_permission_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/permission_location"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/switch_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE" />
+
+            <!-- Permiso: Micrófono -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_permission_microphone"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_permission_microphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/permission_microphone"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/switch_microphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE" />
+
+            <!-- Permiso: Cámara -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_permission_camera"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_permission_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/permission_camera"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/switch_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE" />
         </LinearLayout>
     </ScrollView>
     
