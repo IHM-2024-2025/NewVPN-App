@@ -171,4 +171,5 @@
     <string name="permission_denied">Permiso denegado. Algunas funciones pueden no estar disponibles.</string>
     <string name="permission_granted">Permiso concedido</string>
     <string name="go_to_settings">Ir a Ajustes</string>
+    <string name="imagen_de_un_globo_terraqueo">Imagen de un globo terraqueo</string>
 </resources>
