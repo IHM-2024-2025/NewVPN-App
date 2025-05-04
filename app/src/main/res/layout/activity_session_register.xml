@@ -223,6 +223,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="@string/register_terms_and_conditions"
+        android:textColor="@android:color/holo_blue_dark"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="@+id/cb_session_register_terms"
         app:layout_constraintStart_toEndOf="@+id/cb_session_register_terms"
         app:layout_constraintTop_toTopOf="@+id/cb_session_register_terms" />
