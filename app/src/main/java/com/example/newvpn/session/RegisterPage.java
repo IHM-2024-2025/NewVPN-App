@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.newvpn.R;
 import com.example.newvpn.app.MainPage;
+import com.example.newvpn.info.TermsAndConditionsPage;
 import com.example.newvpn.utils.HeaderHelper;
 
 public class RegisterPage extends AppCompatActivity {
@@ -36,6 +37,14 @@ public class RegisterPage extends AppCompatActivity {
             Intent intent = new Intent(RegisterPage.this, MainPage.class);
             startActivity(intent);
             finish(); // Cerrar la actividad actual
+        });
+        
+        // Configurar el evento para ir a la pantalla de términos y condiciones
+        TextView termsTextView = findViewById(R.id.tv_session_register_terms);
+        termsTextView.setOnClickListener(v -> {
+            // Navegar a la pantalla de términos y condiciones
+            Intent intent = new Intent(RegisterPage.this, TermsAndConditionsPage.class);
+            startActivity(intent);
         });
     }
 }
