@@ -98,7 +98,7 @@
         android:layout_width="421dp"
         android:layout_height="495dp"
         android:layout_marginTop="95dp"
-        android:contentDescription="@string/imagen_de_un_globo_terraqueo"
+        android:contentDescription="@string/iv_decoration"
         android:scaleType="centerCrop"
         android:src="@drawable/mainpage_mapamundi2"
         app:layout_constraintEnd_toEndOf="parent"
