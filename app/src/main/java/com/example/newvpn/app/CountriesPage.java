@@ -31,8 +31,7 @@ public class CountriesPage extends AppCompatActivity implements CountryAdapter.O
         
         try {
             // Inyectar el header
-            HeaderHelper.injectHeader(this, R.id.fl_countries_header_container, getString(R.string.choose_vpn));
-            
+
             // Inyectar el menú
             MenuHelper.injectMenu(this, R.id.fl_countries_menu_container);
             
@@ -74,28 +73,15 @@ public class CountriesPage extends AppCompatActivity implements CountryAdapter.O
     @Override
     public void onCountryClick(String countryName) {
         // Mostrar un mensaje cuando el usuario selecciona un país
-        Toast.makeText(this, getString(R.string.country_changed, countryName), Toast.LENGTH_SHORT).show();
-        
+
         // Actualizar el país seleccionado
         currentCountry = countryName;
         countryAdapter.setSelectedCountry(countryName);
         
-        // Comprobar si es China para mostrar advertencia
-        if (countryName.equals("China")) {
-            showChinaWarning();
-        }
+
     }
     
-    private void showChinaWarning() {
-        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
-        builder.setTitle(R.string.china_warning_title)
-                .setMessage(R.string.china_warning_message)
-                .setPositiveButton(R.string.understood, (dialog, id) -> {
-                    dialog.dismiss();
-                })
-                .setCancelable(true)
-                .show();
-    }
+
     
     // Clase para almacenar datos de país
     public static class Country {

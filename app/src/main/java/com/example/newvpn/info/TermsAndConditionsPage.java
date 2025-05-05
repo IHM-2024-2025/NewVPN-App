@@ -19,7 +19,6 @@ public class TermsAndConditionsPage extends AppCompatActivity {
         // Configurar el título del encabezado
         TextView headerTitle = findViewById(R.id.tv_util_header_title);
         if (headerTitle != null) {
-            headerTitle.setText(R.string.terms_title);
         }
         
         // Configurar el botón para volver

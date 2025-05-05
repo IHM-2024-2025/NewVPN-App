@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="txtNombreUsuario" type="id" />
+    <item name="imgAvatar" type="id" />
+    <item name="imgEditar" type="id" />
+    <item name="txtCorreo" type="id" />
+    <item name="btnCerrarSesion" type="id" />
+    <item name="cardPlan" type="id" />
+</resources>
