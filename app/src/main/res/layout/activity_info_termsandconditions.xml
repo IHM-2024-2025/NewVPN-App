@@ -3,18 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".info.TermsAndConditionsPage">
 
-    <include
-        android:id="@+id/terms_header"
-        layout="@layout/util_app_header"
+    <FrameLayout
+        android:id="@+id/headerContainer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardTerms"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="16dp"
@@ -23,19 +24,24 @@
         app:layout_constraintBottom_toTopOf="@+id/btnBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/terms_header">
+        app:layout_constraintTop_toBottomOf="@+id/headerContainer">
 
         <ScrollView
+            android:id="@+id/scrollTerms"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="16dp">
+            android:fillViewport="true"
+            android:padding="16dp"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false">
 
             <TextView
                 android:id="@+id/tvTermsContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="@string/terms_and_conditions" />
+                android:text="@string/terms_content"
+                android:textIsSelectable="true" />
         </ScrollView>
     </androidx.cardview.widget.CardView>
 
@@ -46,6 +52,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:text="Volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

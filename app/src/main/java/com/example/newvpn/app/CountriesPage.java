@@ -20,7 +20,7 @@ public class CountriesPage extends AppCompatActivity implements CountryAdapter.O
 
     private CountryAdapter countryAdapter;
     private List<Country> countries;
-    private String currentCountry = getString(R.string.country_spain); // País por defecto
+    private String currentCountry = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class CountriesPage extends AppCompatActivity implements CountryAdapter.O
         try {
             // Inyectar el header
             HeaderHelper.injectHeader(this, R.id.fl_countries_header_container, getString(R.string.countries_title));
-
+            currentCountry = getString(R.string.country_spain); // País por defecto
             // Inyectar el menú
             MenuHelper.injectMenu(this, R.id.fl_countries_menu_container);
             

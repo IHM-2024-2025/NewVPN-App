@@ -43,13 +43,13 @@ import java.util.Set;
 
 public class ConnexionPage extends AppCompatActivity {
 
-    private final String PREFS_NAME = getString(R.string.vpnconnectionprefs);
-    private final String KEY_CONNECTION_TYPE = getString(R.string.connection_type_string);
-    private final String KEY_DNS = getString(R.string.custom_dns);
-    private final String KEY_AD_BLOCKER = getString(R.string.ad_blocker_string);
-    private final String KEY_TRACKER_BLOCKER = getString(R.string.tracker_blocker_string);
-    private final String KEY_SPLIT_ROUTING = getString(R.string.split_routing_string);
-    private final String KEY_SPLIT_ROUTING_APPS = getString(R.string.split_routing_apps_string);
+    private String PREFS_NAME;
+    private String KEY_CONNECTION_TYPE;
+    private String KEY_DNS;
+    private String KEY_AD_BLOCKER;
+    private String KEY_TRACKER_BLOCKER;
+    private String KEY_SPLIT_ROUTING;
+    private String KEY_SPLIT_ROUTING_APPS;
 
     private TextInputLayout tilDns;
     private TextInputEditText etDns;
@@ -73,6 +73,10 @@ public class ConnexionPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config_connexion);
+        
+        // Inicializar las variables de cadena
+        initializeStringVariables();
+        
         HeaderHelper.injectHeader(this, R.id.header_container, getString(R.string.connexion_title));
         MenuHelper.injectMenu(this, R.id.fl_mainpage_menu_container);
 
@@ -86,6 +90,16 @@ public class ConnexionPage extends AppCompatActivity {
 
         // Cargar configuración guardada
         loadSavedConfig();
+    }
+    
+    private void initializeStringVariables() {
+        PREFS_NAME = getString(R.string.vpnconnectionprefs);
+        KEY_CONNECTION_TYPE = getString(R.string.connection_type_string);
+        KEY_DNS = getString(R.string.custom_dns);
+        KEY_AD_BLOCKER = getString(R.string.ad_blocker_string);
+        KEY_TRACKER_BLOCKER = getString(R.string.tracker_blocker_string);
+        KEY_SPLIT_ROUTING = getString(R.string.split_routing_string);
+        KEY_SPLIT_ROUTING_APPS = getString(R.string.split_routing_apps_string);
     }
 
     private void initializeViews() {

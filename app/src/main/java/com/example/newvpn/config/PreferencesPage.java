@@ -19,7 +19,7 @@ import com.example.newvpn.utils.MenuHelper;
 
 public class PreferencesPage extends AppCompatActivity {
 
-    private final String TAG = getString(R.string.preferencespage_title);
+    private String TAG = "";
 
     private ConstraintLayout connectionLayout;
     private ImageButton decreaseFontButton;
@@ -42,6 +42,7 @@ public class PreferencesPage extends AppCompatActivity {
         try {
             HeaderHelper.injectHeader(this, R.id.header_container, getString(R.string.config_title));
             MenuHelper.injectMenu(this, R.id.fl_mainpage_menu_container);
+            TAG = getString(R.string.preferencespage_title);
 
             initializeViews();
             setupListeners();
