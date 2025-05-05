@@ -183,4 +183,5 @@
     <string name="logout">Cerrar sesión</string>
     <string name="support">Soporte</string>
     <string name="subscription_details">Detalles de suscripción</string>
+    <string name="user_data_header_title">Mis Datos</string>
 </resources>

@@ -6,4 +6,6 @@
     <item name="txtCorreo" type="id" />
     <item name="btnCerrarSesion" type="id" />
     <item name="cardPlan" type="id" />
+    <item name="fl_info_userdata_header_container" type="id" />
+    <item name="fl_info_userdata_menu_container" type="id" />
 </resources>
