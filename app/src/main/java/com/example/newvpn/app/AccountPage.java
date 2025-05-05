@@ -25,7 +25,7 @@ public class AccountPage extends AppCompatActivity {
         MenuHelper.injectMenu(this, R.id.fl_account_menu_container);
         
         // Inicializar y configurar el botón de suscripción
-        btnSubscribe = findViewById(R.id.button);
+        btnSubscribe = findViewById(R.id.volver_chat);
         btnSubscribe.setOnClickListener(v -> {
             ButtonsNavigation.navigateTo(this, PayPage.class);
         });
