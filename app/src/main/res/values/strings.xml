@@ -171,4 +171,16 @@
     <string name="permission_denied">Permiso denegado. Algunas funciones pueden no estar disponibles.</string>
     <string name="permission_granted">Permiso concedido</string>
     <string name="go_to_settings">Ir a Ajustes</string>
+    <string name="cancelar_suscripci_n">Cancelar Subscripción\n</string>
+    <string name="precio_actual_5_al_mes">Precio actual: 4,99€/mes</string>
+    <string name="fecha_de_renovaci_n_31_12_2025">Fecha de Renovación: 31-12-2025</string>
+    <string name="tu_plan_actual_plan_normal">Tu plan actual: Normal</string>
+    <string name="Suscribirse">Suscribirse</string>
+
+    <!-- Cuenta de Usuario -->
+    <string name="profile_avatar_desc">Imagen de perfil del usuario</string>
+    <string name="edit_profile">Editar perfil</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="support">Soporte</string>
+    <string name="subscription_details">Detalles de suscripción</string>
 </resources>
