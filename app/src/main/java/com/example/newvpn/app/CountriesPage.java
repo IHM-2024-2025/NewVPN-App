@@ -18,11 +18,9 @@ import java.util.Random;
 
 public class CountriesPage extends AppCompatActivity implements CountryAdapter.OnCountryClickListener {
 
-    private static final String TAG = "CountriesPage";
-    private RecyclerView countriesRecyclerView;
     private CountryAdapter countryAdapter;
     private List<Country> countries;
-    private String currentCountry = "España"; // País por defecto
+    private String currentCountry = getString(R.string.country_spain); // País por defecto
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +29,7 @@ public class CountriesPage extends AppCompatActivity implements CountryAdapter.O
         
         try {
             // Inyectar el header
-            HeaderHelper.injectHeader(this, R.id.fl_countries_header_container, "Seleccionar VPN");
+            HeaderHelper.injectHeader(this, R.id.fl_countries_header_container, getString(R.string.countries_title));
 
             // Inyectar el menú
             MenuHelper.injectMenu(this, R.id.fl_countries_menu_container);
@@ -40,12 +38,13 @@ public class CountriesPage extends AppCompatActivity implements CountryAdapter.O
             initCountriesList();
             
             // Configurar el RecyclerView
-            countriesRecyclerView = findViewById(R.id.rv_countries_list);
+            RecyclerView countriesRecyclerView = findViewById(R.id.rv_countries_list);
             countriesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
             countryAdapter = new CountryAdapter(countries, this, currentCountry);
             countriesRecyclerView.setAdapter(countryAdapter);
         } catch (Exception e) {
-            Log.e(TAG, "Error en onCreate: " + e.getMessage());
+            Log.e(getString(R.string.countriespage), getString(R.string.error_country_page2) + e.getMessage());
+            Toast.makeText(this, R.string.error_country_page, Toast.LENGTH_SHORT).show();
         }
     }
     
@@ -54,16 +53,16 @@ public class CountriesPage extends AppCompatActivity implements CountryAdapter.O
         Random random = new Random();
         
         // Añadir los países según los criterios de aceptación
-        countries.add(new Country("Alemania", R.drawable.country_germany, getRandomSignalLevel(random)));
-        countries.add(new Country("Australia", R.drawable.country_australia, getRandomSignalLevel(random)));
-        countries.add(new Country("Canadá", R.drawable.country_canada, getRandomSignalLevel(random)));
-        countries.add(new Country("China", R.drawable.country_china, getRandomSignalLevel(random)));
-        countries.add(new Country("España", R.drawable.country_spain, 4)); // Siempre conexión máxima (4)
-        countries.add(new Country("EE. UU", R.drawable.country_usa, getRandomSignalLevel(random)));
-        countries.add(new Country("India", R.drawable.country_india, getRandomSignalLevel(random)));
-        countries.add(new Country("Japón", R.drawable.country_japan, getRandomSignalLevel(random)));
-        countries.add(new Country("Rusia", R.drawable.country_rusia, getRandomSignalLevel(random)));
-        countries.add(new Country("Reino Unido", R.drawable.country_ingland, getRandomSignalLevel(random)));
+        countries.add(new Country(getString(R.string.country_germany), R.drawable.country_germany, getRandomSignalLevel(random)));
+        countries.add(new Country(getString(R.string.country_australia), R.drawable.country_australia, getRandomSignalLevel(random)));
+        countries.add(new Country(getString(R.string.country_canada), R.drawable.country_canada, getRandomSignalLevel(random)));
+        countries.add(new Country(getString(R.string.country_china), R.drawable.country_china, getRandomSignalLevel(random)));
+        countries.add(new Country(getString(R.string.country_spain), R.drawable.country_spain, 4)); // Siempre conexión máxima (4)
+        countries.add(new Country(getString(R.string.country_usa), R.drawable.country_usa, getRandomSignalLevel(random)));
+        countries.add(new Country(getString(R.string.country_india), R.drawable.country_india, getRandomSignalLevel(random)));
+        countries.add(new Country(getString(R.string.country_japana), R.drawable.country_japan, getRandomSignalLevel(random)));
+        countries.add(new Country(getString(R.string.country_rusia), R.drawable.country_rusia, getRandomSignalLevel(random)));
+        countries.add(new Country(getString(R.string.country_uk), R.drawable.country_ingland, getRandomSignalLevel(random)));
     }
     
     // Método para generar un nivel de señal aleatorio (1-3)
@@ -78,21 +77,15 @@ public class CountriesPage extends AppCompatActivity implements CountryAdapter.O
         // Actualizar el país seleccionado
         currentCountry = countryName;
         countryAdapter.setSelectedCountry(countryName);
-        
-
     }
     
 
     
     // Clase para almacenar datos de país
     public static class Country {
-        private String name;
-        private int flagResourceId;
-        private int signalLevel; // 1: baja, 2: media, 3: buena, 4: excelente
-        
-        public Country(String name, int flagResourceId) {
-            this(name, flagResourceId, 1);
-        }
+        private final String name;
+        private final int flagResourceId;
+        private final int signalLevel; // 1: baja, 2: media, 3: buena, 4: excelente
         
         public Country(String name, int flagResourceId, int signalLevel) {
             this.name = name;

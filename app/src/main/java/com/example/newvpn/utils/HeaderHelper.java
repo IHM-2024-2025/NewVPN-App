@@ -90,7 +90,7 @@ public class HeaderHelper {
         if (logoImageView != null) {
             logoImageView.setOnClickListener(v -> {
                 if (activity instanceof MainPage) {
-                    Toast.makeText(activity, "Ya estás en la página principal", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, R.string.warning_main_page, Toast.LENGTH_SHORT).show();
                 } else {
                     ButtonsNavigation.navigateTo(activity, MainPage.class);
                 }

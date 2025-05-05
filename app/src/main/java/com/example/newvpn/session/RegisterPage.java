@@ -19,7 +19,7 @@ public class RegisterPage extends AppCompatActivity {
         setContentView(R.layout.activity_session_register);
 
         // Inyectar el header
-        HeaderHelper.injectHeader(this, R.id.fl_register_header_container, "New VPN");
+        HeaderHelper.injectHeader(this, R.id.fl_register_header_container, getString(R.string.new_vpn));
         
         // Configurar el evento para ir a la pantalla de inicio de sesión
         TextView loginTextView = findViewById(R.id.tv_session_register_goto_login);

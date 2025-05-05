@@ -20,14 +20,11 @@ public class FaqPage extends AppCompatActivity {
         volverFaq.setEnabled(true);
 
         // Acción al hacer clic en el botón
-        volverFaq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Ir a la actividad ContactPage
-                Intent intent = new Intent(FaqPage.this, ContactPage.class);
-                startActivity(intent);
-                finish(); // Opcional: cerrar FaqPage para que no se pueda volver con el botón "Atrás"
-            }
+        volverFaq.setOnClickListener(v -> {
+            // Ir a la actividad ContactPage
+            Intent intent = new Intent(FaqPage.this, ContactPage.class);
+            startActivity(intent);
+            finish(); // Opcional: cerrar FaqPage para que no se pueda volver con el botón "Atrás"
         });
     }
 }

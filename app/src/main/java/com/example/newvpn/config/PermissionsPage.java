@@ -80,7 +80,7 @@ public class PermissionsPage extends AppCompatActivity {
         // Configurar listeners para los switches
         switchContacts.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                if (!checkPermission(Manifest.permission.READ_CONTACTS)) {
+                if (checkPermission(Manifest.permission.READ_CONTACTS)) {
                     requestContactsPermission.launch(Manifest.permission.READ_CONTACTS);
                 }
             } else {
@@ -90,7 +90,7 @@ public class PermissionsPage extends AppCompatActivity {
         
         switchLocation.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                if (!checkPermission(Manifest.permission.ACCESS_FINE_LOCATION)) {
+                if (checkPermission(Manifest.permission.ACCESS_FINE_LOCATION)) {
                     requestLocationPermission.launch(Manifest.permission.ACCESS_FINE_LOCATION);
                 }
             } else {
@@ -100,7 +100,7 @@ public class PermissionsPage extends AppCompatActivity {
         
         switchMicrophone.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                if (!checkPermission(Manifest.permission.RECORD_AUDIO)) {
+                if (checkPermission(Manifest.permission.RECORD_AUDIO)) {
                     requestMicrophonePermission.launch(Manifest.permission.RECORD_AUDIO);
                 }
             } else {
@@ -110,7 +110,7 @@ public class PermissionsPage extends AppCompatActivity {
         
         switchCamera.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                if (!checkPermission(Manifest.permission.CAMERA)) {
+                if (checkPermission(Manifest.permission.CAMERA)) {
                     requestCameraPermission.launch(Manifest.permission.CAMERA);
                 }
             } else {
@@ -137,15 +137,15 @@ public class PermissionsPage extends AppCompatActivity {
     private boolean checkPermission(String permission) {
         // Devuelve el estado simulado en lugar del permiso real
         if (Manifest.permission.READ_CONTACTS.equals(permission)) {
-            return simulatedContactsPermission;
+            return !simulatedContactsPermission;
         } else if (Manifest.permission.ACCESS_FINE_LOCATION.equals(permission)) {
-            return simulatedLocationPermission;
+            return !simulatedLocationPermission;
         } else if (Manifest.permission.RECORD_AUDIO.equals(permission)) {
-            return simulatedMicrophonePermission;
+            return !simulatedMicrophonePermission;
         } else if (Manifest.permission.CAMERA.equals(permission)) {
-            return simulatedCameraPermission;
+            return !simulatedCameraPermission;
         }
-        return false;
+        return true;
     }
     
     private void handlePermissionResult(@SuppressLint("UseSwitchCompatOrMaterialCode") Switch switchView, boolean isGranted) {
@@ -169,7 +169,7 @@ public class PermissionsPage extends AppCompatActivity {
     
     // Método para simular la revocación del permiso
     private void revokePermission(String permission, @SuppressLint("UseSwitchCompatOrMaterialCode") Switch switchView) {
-        Toast.makeText(this, "Permiso eliminado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.perm_deleted, Toast.LENGTH_SHORT).show();
         // Actualizar la variable simulada según el permiso revocado
         if (Manifest.permission.READ_CONTACTS.equals(permission)) {
             simulatedContactsPermission = false;

@@ -23,11 +23,6 @@ public class TermsAndConditionsPage extends AppCompatActivity {
         
         // Configurar el botón para volver
         Button backButton = findViewById(R.id.btnBack);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        backButton.setOnClickListener(v -> finish());
     }
 }

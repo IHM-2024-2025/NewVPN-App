@@ -19,7 +19,7 @@ import com.example.newvpn.utils.MenuHelper;
 
 public class PreferencesPage extends AppCompatActivity {
 
-    private static final String TAG = "PreferencesPage";
+    private final String TAG = getString(R.string.preferencespage_title);
 
     private ConstraintLayout connectionLayout;
     private ImageButton decreaseFontButton;
@@ -126,7 +126,7 @@ public class PreferencesPage extends AppCompatActivity {
     private void copyToClipboard() {
         try {
             ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-            ClipData clip = ClipData.newPlainText("Enlace de invitación", "https://joseleelportfolio.vercel.app");
+            ClipData clip = ClipData.newPlainText(getString(R.string.share_url), getString(R.string.share_url_string));
             clipboard.setPrimaryClip(clip);
         } catch (Exception e) {
             Log.e(TAG, "Error en copyToClipboard: " + e.getMessage());

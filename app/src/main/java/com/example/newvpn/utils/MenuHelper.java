@@ -66,7 +66,7 @@ public class MenuHelper {
         ImageView homeButton = menuView.findViewById(R.id.iv_util_menu_house);
         homeButton.setOnClickListener(v -> {
             if (activity instanceof MainPage) {
-                Toast.makeText(activity, "Ya estás en la página principal", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, R.string.warning_main_page, Toast.LENGTH_SHORT).show();
             } else {
                 ButtonsNavigation.navigateTo(activity, MainPage.class);
             }
@@ -76,7 +76,7 @@ public class MenuHelper {
         ImageView globeButton = menuView.findViewById(R.id.iv_util_menu_globe);
         globeButton.setOnClickListener(v -> {
             if (activity instanceof CountriesPage) {
-                Toast.makeText(activity, "Ya estás en la página de países", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, R.string.warning_country_page, Toast.LENGTH_SHORT).show();
             } else {
                 ButtonsNavigation.navigateTo(activity, CountriesPage.class);
             }
@@ -86,7 +86,7 @@ public class MenuHelper {
         ImageView settingsButton = menuView.findViewById(R.id.iv_util_menu_settings);
         settingsButton.setOnClickListener(v -> {
             if (activity instanceof PreferencesPage) {
-                Toast.makeText(activity, "Ya estás en la página de configuración", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, R.string.warning_config_page, Toast.LENGTH_SHORT).show();
             } else {
                 ButtonsNavigation.navigateTo(activity, PreferencesPage.class);
             }
@@ -96,7 +96,7 @@ public class MenuHelper {
         ImageView profileButton = menuView.findViewById(R.id.iv_util_menu_profile);
         profileButton.setOnClickListener(v -> {
             if (activity instanceof AccountPage) {
-                Toast.makeText(activity, "Ya estás en la página de perfil", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, R.string.warning_profile_page, Toast.LENGTH_SHORT).show();
             } else {
                 ButtonsNavigation.navigateTo(activity, AccountPage.class);
             }

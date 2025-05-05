@@ -2,7 +2,6 @@ package com.example.newvpn.app;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,7 +28,7 @@ public class AccountPage extends AppCompatActivity {
         setContentView(R.layout.activity_app_account);
 
         // Inyectar el header
-        HeaderHelper.injectHeader(this, R.id.fl_account_header_container, "Mi Cuenta");
+        HeaderHelper.injectHeader(this, R.id.fl_account_header_container, getString(R.string.my_account));
 
         // Inyectar el menú
         MenuHelper.injectMenu(this, R.id.fl_account_menu_container);
@@ -61,19 +60,15 @@ public class AccountPage extends AppCompatActivity {
 
         // Botón de cerrar sesión
         btnCerrarSesion.setOnClickListener(v -> {
-
-            Toast.makeText(this, "Sesión cerrada correctamente", Toast.LENGTH_SHORT).show();
-            // Navegamos a la pantalla de login
+            Toast.makeText(this, R.string.session_closed, Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(AccountPage.this, LoginPage.class);
-            // Limpiamos la pila de actividades para que el usuario no pueda volver atrás
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         });
 
         // Botón de cancelar suscripción
         btnCancelarSuscripcion.setOnClickListener(v -> {
-            // Lógica para cancelar suscripción
-            Toast.makeText(this, "Solicitud de cancelación enviada", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.subscription_cancel, Toast.LENGTH_SHORT).show();
         });
 
         // Icono de editar
@@ -85,15 +80,13 @@ public class AccountPage extends AppCompatActivity {
 
         // Botón de soporte
         btnSoporte.setOnClickListener(v -> {
-            // Navegar a la página de soporte o mostrar diálogo
-            Toast.makeText(this, "Conectando con soporte...", Toast.LENGTH_SHORT).show();
-            // Aquí puedes añadir la navegación a la página de soporte cuando esté disponible
+            Toast.makeText(this, R.string.support_connection, Toast.LENGTH_SHORT).show();
         });
     }
 
     private void loadUserData() {
         // Simulación de datos - En un caso real, estos datos vendrían de una base de datos o API
-        txtNombreUsuario.setText("Rodrigo Díaz de Vivar");
-        txtCorreo.setText("cid@alu.ubu.es");
+        txtNombreUsuario.setText(R.string.user_name);
+        txtCorreo.setText(R.string.user_email);
     }
 }

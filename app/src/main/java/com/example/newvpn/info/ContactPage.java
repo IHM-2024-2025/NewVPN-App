@@ -26,33 +26,22 @@ public class ContactPage extends AppCompatActivity {
         btInfoChat.setEnabled(true);
 
         // Botón 1: Ir a LiveChatPage
-        tInfoSendMessage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ContactPage.this, LiveChatPage.class);
-                startActivity(intent);
-            }
+        tInfoSendMessage.setOnClickListener(v -> {
+            Intent intent = new Intent(ContactPage.this, LiveChatPage.class);
+            startActivity(intent);
         });
 
         // Botón 2: Ir a FaqPage
-        irFaq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ContactPage.this, FaqPage.class);
-                startActivity(intent);
-            }
+        irFaq.setOnClickListener(v -> {
+            Intent intent = new Intent(ContactPage.this, FaqPage.class);
+            startActivity(intent);
         });
 
         // Botón 3: Mostrar alerta de mensaje enviado
-        btInfoChat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new AlertDialog.Builder(ContactPage.this)
-                        .setTitle("Mensaje enviado")
-                        .setMessage("Tu mensaje ha sido enviado con éxito.")
-                        .setPositiveButton("OK", null)
-                        .show();
-            }
-        });
+        btInfoChat.setOnClickListener(v -> new AlertDialog.Builder(ContactPage.this)
+                .setTitle(R.string.message_send)
+                .setMessage(R.string.message_send_sucess)
+                .setPositiveButton(R.string.ok, null)
+                .show());
     }
 }

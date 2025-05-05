@@ -24,7 +24,6 @@ public class PayPage extends AppCompatActivity {
     private Button btnPayCard, btnPayPaypal, btnPaySubmit;
     private LinearLayout llPayCardForm, llPayPaypalForm;
     private RadioGroup rgPayPlans;
-    private RadioButton rbPayMonthly, rbPayYearly;
     private TextView tvPayPrice;
 
     @Override
@@ -55,8 +54,6 @@ public class PayPage extends AppCompatActivity {
 
         // Planes y precios
         rgPayPlans = findViewById(R.id.rg_pay_plans);
-        rbPayMonthly = findViewById(R.id.rb_pay_monthly);
-        rbPayYearly = findViewById(R.id.rb_pay_yearly);
         tvPayPrice = findViewById(R.id.tv_pay_price);
     }
 

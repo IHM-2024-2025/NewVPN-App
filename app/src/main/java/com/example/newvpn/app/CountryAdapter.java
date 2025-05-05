@@ -1,5 +1,6 @@
 package com.example.newvpn.app;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,13 +31,14 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
         this.selectedCountry = selectedCountry;
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     public void setSelectedCountry(String countryName) {
         this.selectedCountry = countryName;
         notifyDataSetChanged();
     }
 
+
     @NonNull
-    @Override
     public CountryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.util_item_country, parent, false);
         return new CountryViewHolder(view);
@@ -61,8 +63,6 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
 
     private int getSignalDrawable(int signalLevel) {
         switch (signalLevel) {
-            case 1:
-                return R.drawable.countries_signal_low;
             case 2:
                 return R.drawable.countries_signal_medium;
             case 3:

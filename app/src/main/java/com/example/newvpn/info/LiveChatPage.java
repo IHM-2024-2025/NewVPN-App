@@ -20,14 +20,11 @@ public class LiveChatPage extends AppCompatActivity {
         volverChat.setEnabled(true);
 
         // Acción al hacer clic
-        volverChat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Ir a la actividad ContactPage
-                Intent intent = new Intent(LiveChatPage.this, ContactPage.class);
-                startActivity(intent);
-                finish(); // Opcional: cerrar LiveChatPage si no quieres volver con "Atrás"
-            }
+        volverChat.setOnClickListener(v -> {
+            // Ir a la actividad ContactPage
+            Intent intent = new Intent(LiveChatPage.this, ContactPage.class);
+            startActivity(intent);
+            finish();
         });
     }
 }

@@ -2,6 +2,7 @@ package com.example.newvpn.config;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -42,13 +43,13 @@ import java.util.Set;
 
 public class ConnexionPage extends AppCompatActivity {
 
-    private static final String PREFS_NAME = "VpnConnectionPrefs";
-    private static final String KEY_CONNECTION_TYPE = "connection_type";
-    private static final String KEY_DNS = "custom_dns";
-    private static final String KEY_AD_BLOCKER = "ad_blocker";
-    private static final String KEY_TRACKER_BLOCKER = "tracker_blocker";
-    private static final String KEY_SPLIT_ROUTING = "split_routing";
-    private static final String KEY_SPLIT_ROUTING_APPS = "split_routing_apps";
+    private final String PREFS_NAME = getString(R.string.vpnconnectionprefs);
+    private final String KEY_CONNECTION_TYPE = getString(R.string.connection_type_string);
+    private final String KEY_DNS = getString(R.string.custom_dns);
+    private final String KEY_AD_BLOCKER = getString(R.string.ad_blocker_string);
+    private final String KEY_TRACKER_BLOCKER = getString(R.string.tracker_blocker_string);
+    private final String KEY_SPLIT_ROUTING = getString(R.string.split_routing_string);
+    private final String KEY_SPLIT_ROUTING_APPS = getString(R.string.split_routing_apps_string);
 
     private TextInputLayout tilDns;
     private TextInputEditText etDns;
@@ -248,13 +249,14 @@ public class ConnexionPage extends AppCompatActivity {
                 .show();
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private void scanInstalledApps() {
         if (!installedApps.isEmpty()) {
             return; // Ya se escanearon las apps previamente
         }
 
         PackageManager pm = getPackageManager();
-        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
+        @SuppressLint("QueryPermissionsNeeded") List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
 
         for (ApplicationInfo appInfo : packages) {
             // Omitir aplicaciones del sistema sin launcher

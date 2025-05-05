@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Generales -->
     <string name="app_name">NewVPN App</string>
     <string name="app_title">NewVPN</string>
@@ -20,7 +20,7 @@
     <string name="menu_account">Cuenta</string>
     <string name="menu_settings">Ajustes</string>
 
-    <!-- Página principal (MainPage) -->
+    <!-- Página principal -->
     <string name="welcome_message">¡Bienvenido a la página principal!</string>
     <string name="welcome_text">Bienvenido, </string>
     <string name="welcome_user">[Nombre y apellidos]</string>
@@ -31,7 +31,7 @@
     <string name="upload_icon">Icono de subida</string>
     <string name="download_icon">Icono de descarga</string>
 
-    <!-- Ajustes (Settings) -->
+    <!-- Ajustes -->
     <string name="config_title">Preferencias</string>
     <string name="dark_mode_on">Modo oscuro activado</string>
     <string name="dark_mode_off">Modo oscuro desactivado</string>
@@ -137,7 +137,7 @@
     <string name="pay_success">Pago realizado con éxito</string>
     <string name="pay_error">Error al procesar el pago</string>
     <string name="pay_monthly">Plan Mensual</string>
-    <string name="pay_yearly">Plan Anual</string>
+    <string name="pay_yearly" tools:ignore="Typos">Plan Anual</string>
     <string name="pay_price_monthly">4,99€/mes</string>
     <string name="pay_price_yearly">49,99€/año</string>
     <string name="pay_save">Ahorra 20%</string>
@@ -171,9 +171,9 @@
     <string name="permission_denied">Permiso denegado. Algunas funciones pueden no estar disponibles.</string>
     <string name="permission_granted">Permiso concedido</string>
     <string name="go_to_settings">Ir a Ajustes</string>
-    <string name="cancelar_suscripci_n">Cancelar Subscripción\n</string>
+    <string name="cancelar_suscripci_n">Cancelar Subscripción</string>
     <string name="precio_actual_5_al_mes">Precio actual: 4,99€/mes</string>
-    <string name="fecha_de_renovaci_n_31_12_2025">Fecha de Renovación: 31-12-2025</string>
+    <string name="fecha_de_renovaci_n_31_12_2025">Fecha de Renovación: 31–12–2025</string>
     <string name="tu_plan_actual_plan_normal">Tu plan actual: Normal</string>
     <string name="Suscribirse">Suscribirse</string>
 
@@ -184,4 +184,48 @@
     <string name="support">Soporte</string>
     <string name="subscription_details">Detalles de suscripción</string>
     <string name="user_data_header_title">Mis Datos</string>
+    <string name="my_account">Mi Cuenta</string>
+    <string name="session_closed">Sesión cerrada correctamente</string>
+    <string name="subscription_cancel">Solicitud de cancelación enviada</string>
+    <string name="user_name">Rodrigo Díaz de Vivar</string>
+    <string name="user_email">cid@alu.ubu.es</string>
+    <string name="support_connection">Conectando con soporte…</string>
+    <string name="error_country_page">Error al cargar la lista de países</string>
+    <string name="countriespage">CountriesPage</string>
+    <string name="error_country_page2">"Error al inicializar la página de países: "</string>
+    <string name="vpnconnectionprefs">VpnConnectionPrefs</string>
+    <string name="connection_type_string">connection_type</string>
+    <string name="custom_dns">custom_dns</string>
+    <string name="ad_blocker_string">ad_blocker</string>
+    <string name="tracker_blocker_string">tracker_blocker</string>
+    <string name="split_routing_string">split_routing</string>
+    <string name="split_routing_apps_string">split_routing_apps</string>
+    <string name="perm_deleted">Permiso eliminado</string>
+    <string name="preferencespage_title">PreferencesPage</string>
+    <string name="share_url">Enlace de invitación</string>
+    <string name="share_url_string">https://joseleelportfolio.vercel.app</string>
+    <string name="message_send">Mensaje enviado</string>
+    <string name="message_send_sucess">Tu mensaje ha sido enviado con éxito.</string>
+    <string name="ok">OK</string>
+    <string name="changes_saved">Cambios guardados</string>
+    <string name="new_vpn">New VPN</string>
+
+    <!-- Página de países -->
+    <string name="countries_title">Seleccionar VPN</string>
+    <string name="country_spain">España</string>
+    <string name="country_germany">Alemania</string>
+    <string name="country_japana">Japón</string>
+    <string name="country_rusia">Rusia</string>
+    <string name="country_uk">Reino Unido</string>
+    <string name="country_australia">Australia</string>
+    <string name="country_canada">Canadá</string>
+    <string name="country_china">China</string>
+    <string name="country_usa">EE. UU</string>
+    <string name="country_india">India</string>
+
+    <!-- Advertencias -->
+    <string name="warning_main_page">Ya estás en la página principal</string>
+    <string name="warning_profile_page">Ya estás en la página de perfil</string>
+    <string name="warning_config_page">Ya estás en la página de configuración</string>
+    <string name="warning_country_page">Ya estás en la página de países</string>
 </resources>
