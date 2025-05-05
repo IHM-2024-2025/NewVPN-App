@@ -183,7 +183,7 @@
             android:layout_height="105dp"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
-            android:src="@drawable/boton_on" />
+            android:src="@drawable/mainpage_button_on" />
     </FrameLayout>
 
     <!-- Contenedor para el menú -->
