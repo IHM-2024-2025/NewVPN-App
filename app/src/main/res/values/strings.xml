@@ -121,7 +121,7 @@
     <!-- Página de pago -->
     <string name="pay_title">Suscribirse</string>
     <string name="pay_subtitle">Seleccione su método de pago</string>
-    <string name="pay_card_button">Tarjeta de crédito/débito</string>
+    <string name="pay_card_button">Pago con Tarjeta</string>
     <string name="pay_paypal_button">PayPal</string>
     <string name="pay_card_number">Número de tarjeta</string>
     <string name="pay_card_name">Nombre del titular</string>
@@ -161,4 +161,28 @@
     <string name="pay_error_ok">Intentar de nuevo</string>
     <string name="pay_card_icon_description">Icono de tarjeta de crédito</string>
     <string name="pay_paypal_icon_description">Icono de PayPal</string>
+
+    <!-- Permisos -->
+    <string name="permission_contacts">👥 contactos</string>
+    <string name="permission_location">📍 ubicación</string>
+    <string name="permission_microphone">🎤 micrófono</string>
+    <string name="permission_camera">📷 cámara</string>
+    <string name="permission_rationale">Este permiso es necesario para el correcto funcionamiento de la aplicación</string>
+    <string name="permission_denied">Permiso denegado. Algunas funciones pueden no estar disponibles.</string>
+    <string name="permission_granted">Permiso concedido</string>
+    <string name="go_to_settings">Ir a Ajustes</string>
+
+    <!-- Página de países -->
+    <string name="choose_vpn">Elegir VPN</string>
+    <string name="countries_instructions">Seleccione el país desde donde quiere conectarse:</string>
+    <string name="country_changed">VPN cambiada a %s</string>
+    <string name="china_warning_title">Advertencia sobre VPN en China</string>
+    <string name="china_warning_message">El uso de VPN en China está sujeto a restricciones legales. El uso de este servicio podría estar infringiendo las leyes locales. Proceda bajo su propia responsabilidad.</string>
+    <string name="connection_quality">Calidad de conexión</string>
+
+    <!-- Términos y Condiciones -->
+    <string name="terms_title">TyC</string>
+    <string name="terms_content">Bienvenido a NewVPN. Estos Términos y Condiciones de Uso (\'Términos\') rigen el acceso y uso de nuestra aplicación y servicios VPN (\'Servicio\'). Al utilizar nuestro Servicio, usted acepta cumplir con estos Términos. Si no está de acuerdo, le pedimos que no utilice nuestro Servicio.\n\nEl Servicio está diseñado para proporcionar privacidad y seguridad en la navegación; sin embargo, se prohíbe su uso para actividades ilegales, incluido pero no limitado a la descarga y distribución de contenido con derechos de autor sin autorización, ataques cibernéticos, hacking, actividades de phishing, fraude, spam o cualquier actividad delictiva.\n\nEl Usuario podrá necesitar crear una cuenta para acceder a ciertos servicios y es responsable de mantener la seguridad de sus credenciales de acceso.\n\nEl Proveedor hará esfuerzos razonables para garantizar la disponibilidad del Servicio, pero no garantiza su funcionamiento ininterrumpido o libre de errores.\n\nEl uso del Servicio está sujeto a nuestra Política de Privacidad, que establece cómo recopilamos, usamos y protegemos la información del Usuario.\n\nEl Proveedor no será responsable por daños directos, indirectos, o consecuentes derivados del uso o incapacidad de uso del Servicio.\n\nNos reservamos el derecho de modificar estos Términos en cualquier momento, notificando cualquier cambio, y el uso continuo del Servicio constituirá la aceptación de los nuevos términos.\n\nEstos Términos se rigen por las leyes de su país y cualquier disputa será resuelta ante los tribunales de la autoridad competente.\n\nPara cualquier consulta sobre estos Términos, puede contactarnos en NewVPNsupport@ubu.es\n\nAl utilizar NewVPN, el Usuario declara haber leído, entendido y aceptado estos Términos y Condiciones de Uso.</string>
+    <string name="terms_accept">Acepto los términos y condiciones</string>
+    <string name="terms_back">Volver</string>
 </resources>

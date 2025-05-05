@@ -8,6 +8,9 @@ import android.widget.ImageView;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.Toast;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
+
 import com.example.newvpn.app.AccountPage;
 import com.example.newvpn.app.CountriesPage;
 import com.example.newvpn.app.MainPage;
@@ -15,6 +18,9 @@ import com.example.newvpn.R;
 import com.example.newvpn.config.PreferencesPage;
 
 public class MenuHelper {
+
+    // Variable estática para almacenar el último botón activo
+    private static int lastActiveButtonId = -1;
     
     /**
      * Inyecta el menú de navegación en una actividad.
@@ -44,7 +50,9 @@ public class MenuHelper {
         // Añadir el menú al contenedor
         container.removeAllViews();
         container.addView(menuView);
-
+        
+        // Reposicionar la marca de la página activa
+        repositionMarkPage(activity, menuView);
     }
     
     /**
@@ -93,5 +101,55 @@ public class MenuHelper {
                 ButtonsNavigation.navigateTo(activity, AccountPage.class);
             }
         });
+    }
+    
+    /**
+     * Reposiciona la ImageView de mark page para indicar la página activa.
+     *
+     * @param activity La actividad actual.
+     * @param menuView La vista del menú (ConstraintLayout).
+     */
+    private static void repositionMarkPage(Activity activity, View menuView) {
+        // Asegurarse de que el layout es un ConstraintLayout
+        if (!(menuView instanceof ConstraintLayout)) {
+            return;
+        }
+        ConstraintLayout layout = (ConstraintLayout) menuView;
+        ConstraintSet constraintSet = new ConstraintSet();
+        constraintSet.clone(layout);
+        
+        int activeButtonId = -1;
+        if (activity instanceof MainPage) {
+            activeButtonId = R.id.iv_util_menu_house;
+        } else if (activity instanceof CountriesPage) {
+            activeButtonId = R.id.iv_util_menu_globe;
+        } else if (activity instanceof PreferencesPage) {
+            activeButtonId = R.id.iv_util_menu_settings;
+        } else if (activity instanceof AccountPage) {
+            activeButtonId = R.id.iv_util_menu_profile;
+        }
+        
+        if (activeButtonId != -1) {
+            // Actualiza el último botón activo
+            lastActiveButtonId = activeButtonId;
+        } else if (lastActiveButtonId != -1) {
+            // Si no se encontró la página, usa el último botón activo
+            activeButtonId = lastActiveButtonId;
+        } else {
+            // Si no hay un último botón activo registrado, salir
+            return;
+        }
+        
+        // Reestablecer las constraints de la marca
+        constraintSet.clear(R.id.iv_util_mark_page, ConstraintSet.START);
+        constraintSet.clear(R.id.iv_util_mark_page, ConstraintSet.END);
+        
+        // Conectar la marca a los bordes del botón activo para centrarla
+        constraintSet.connect(R.id.iv_util_mark_page, ConstraintSet.START, activeButtonId, ConstraintSet.START);
+        constraintSet.connect(R.id.iv_util_mark_page, ConstraintSet.END, activeButtonId, ConstraintSet.END);
+        
+        // ...otros ajustes de constraints si es necesario...
+        
+        constraintSet.applyTo(layout);
     }
 }

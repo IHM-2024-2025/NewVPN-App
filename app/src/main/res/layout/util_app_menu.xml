@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -18,6 +19,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9"
         app:srcCompat="@drawable/color_green_rounded_63ff88" />
+
+    <ImageView
+        android:id="@+id/iv_util_mark_page"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/iv_decoration"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_util_menu_house"
+        app:layout_constraintStart_toStartOf="@+id/iv_util_menu_house"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/color_pink_rounded_ffc2f4" />
 
     <ImageView
         android:id="@+id/iv_util_menu_house"
@@ -70,4 +82,5 @@
         app:layout_constraintTop_toTopOf="@+id/iv_util_menu_bg"
         app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/menu_profile" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -196,7 +196,7 @@
         android:id="@+id/cb_session_register_terms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="62dp"
         android:layout_marginBottom="24dp"
         android:text="@string/register_accept_terms"
         app:layout_constraintBottom_toTopOf="@+id/bt_session_register_register"
@@ -210,45 +210,52 @@
         android:layout_marginStart="94dp"
         android:layout_marginTop="31dp"
         android:layout_marginEnd="95dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/register_button"
-        app:layout_constraintBottom_toTopOf="@+id/tv_session_register_login"
+        app:layout_constraintBottom_toTopOf="@+id/ll_login_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cb_session_register_terms" />
 
     <TextView
-        android:id="@+id/tv_session_register_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="93dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/register_account_exists"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_session_register_register" />
-
-    <TextView
         android:id="@+id/tv_session_register_terms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginStart="8dp"
         android:text="@string/register_terms_and_conditions"
-        app:layout_constraintBottom_toTopOf="@+id/bt_session_register_register"
+        android:textColor="@android:color/holo_blue_dark"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_session_register_terms"
         app:layout_constraintStart_toEndOf="@+id/cb_session_register_terms"
-        app:layout_constraintTop_toBottomOf="@+id/pt_session_register_confirmpassword"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/cb_session_register_terms" />
 
-    <TextView
-        android:id="@+id/tv_session_register_goto_login"
+    <LinearLayout
+        android:id="@+id/ll_login_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="11dp"
-        android:text="@string/register_goto_login"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_session_register_login"
-        app:layout_constraintTop_toBottomOf="@+id/bt_session_register_register" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_session_register_register">
+
+        <TextView
+            android:id="@+id/tv_session_register_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_account_exists" />
+
+        <TextView
+            android:id="@+id/tv_session_register_goto_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/register_goto_login"
+            android:textColor="@android:color/holo_blue_dark"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
