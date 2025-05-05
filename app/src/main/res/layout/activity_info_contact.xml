@@ -171,7 +171,7 @@
         android:layout_marginEnd="147dp"
         android:layout_marginBottom="188dp"
         android:background="#2196F3"
-        android:text="@string/info_connect"
+        android:text="Enviar"
         app:iconTint="#C31515"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -264,7 +264,7 @@
         app:srcCompat="@drawable/util_arrow_left_24px" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/ir_faq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="288dp"
