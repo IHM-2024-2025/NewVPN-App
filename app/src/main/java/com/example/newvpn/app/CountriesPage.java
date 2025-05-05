@@ -31,6 +31,7 @@ public class CountriesPage extends AppCompatActivity implements CountryAdapter.O
         
         try {
             // Inyectar el header
+            HeaderHelper.injectHeader(this, R.id.fl_countries_header_container, "Seleccionar VPN");
 
             // Inyectar el menú
             MenuHelper.injectMenu(this, R.id.fl_countries_menu_container);
