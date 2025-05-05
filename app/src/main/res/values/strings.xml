@@ -30,7 +30,6 @@
     <string name="speed_units">KB/s</string>
     <string name="upload_icon">Icono de subida</string>
     <string name="download_icon">Icono de descarga</string>
-    <string name="imagen_globo">Imagen de la Tierra</string>
 
     <!-- Ajustes (Settings) -->
     <string name="config_title">Preferencias</string>
@@ -172,16 +171,4 @@
     <string name="permission_denied">Permiso denegado. Algunas funciones pueden no estar disponibles.</string>
     <string name="permission_granted">Permiso concedido</string>
     <string name="go_to_settings">Ir a Ajustes</string>
-    <string name="tu_plan_actual_plan_normal">Tu plan actual: Plan normal</string>
-    <string name="fecha_de_renovaci_n_31_12_2025">Fecha de renovación: 31/12/2025</string>
-    <string name="precio_actual_5_al_mes">Precio actual: 5€ al mes</string>
-    <string name="cancelar_suscripci_n">Cancelar suscripción</string>
-    <string name="p_sate_a_premium">Pásate a Premium</string>
-    <string name="guardar_cambios">Guardar cambios</string>
-    <string name="contrase_a">Contraseña</string>
-    <string name="email">Email</string>
-    <string name="pa_s">País</string>
-    <string name="tel_fono">Teléfono</string>
-    <string name="apellidos">Apellidos</string>
-    <string name="nombre">Nombre</string>
 </resources>

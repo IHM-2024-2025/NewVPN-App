@@ -38,31 +38,24 @@
 
     <View
         android:id="@+id/dv_mainpage_down_up"
-        android:layout_width="3dp"
+        android:layout_width="2dp"
         android:layout_height="57dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="210dp"
+        android:layout_marginEnd="212dp"
+        android:layout_marginBottom="85dp"
         android:background="#63FF88"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/iv_mainpage_upload"
-        app:layout_constraintStart_toEndOf="@+id/tv_mainpage_download_units"
-        app:layout_constraintTop_toBottomOf="@+id/globeImage" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/iv_mainpage_upload"
         android:layout_width="34dp"
         android:layout_height="35dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="226dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="98dp"
         android:contentDescription="@string/upload_icon"
         android:rotation="270"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/globeImage"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/mainpage_right_arrow" />
 
     <TextView
@@ -102,10 +95,10 @@
 
     <ImageView
         android:id="@+id/globeImage"
-        android:layout_width="459dp"
-        android:layout_height="543dp"
+        android:layout_width="421dp"
+        android:layout_height="495dp"
         android:layout_marginTop="95dp"
-        android:contentDescription="@string/imagen_globo"
+        android:contentDescription="@string/imagen_de_un_globo_terraqueo"
         android:scaleType="centerCrop"
         android:src="@drawable/mainpage_mapamundi2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -140,13 +133,11 @@
         android:layout_width="34dp"
         android:layout_height="35dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="558dp"
-        android:layout_marginBottom="226dp"
+        android:layout_marginBottom="98dp"
         android:contentDescription="@string/download_icon"
         android:rotation="90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/globeImage"
         app:srcCompat="@drawable/mainpage_right_arrow" />
 
     <TextView
@@ -165,7 +156,7 @@
         android:id="@+id/vpnButton"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="260dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_mainpage_welcomeuser">
