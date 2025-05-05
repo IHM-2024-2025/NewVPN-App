@@ -3,201 +3,228 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="24dp">
+    android:layout_height="match_parent">
 
-    <!-- Avatar -->
-    <ImageView
-        android:id="@+id/imgAvatar"
-        android:layout_width="95dp"
-        android:layout_height="81dp"
-        android:src="@drawable/profile_avatar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Icono Editar -->
-
-    <!-- Contenedor de campos con etiquetas -->
-
-    <ImageView
-        android:id="@+id/imgEditarAvatar"
-        android:layout_width="57dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/ic_edit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/layoutCampos"
+    <!-- Contenedor del Header -->
+    <FrameLayout
+        android:id="@+id/fl_info_userdata_header_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgEditarAvatar">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Cada fila: etiqueta + campo -->
-        <LinearLayout
+    <!-- Contenedor principal del contenido -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fl_info_userdata_menu_container"
+        app:layout_constraintTop_toBottomOf="@+id/fl_info_userdata_header_container"
+        android:padding="24dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="0dp"
+            <!-- Avatar -->
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="95dp"
+                android:layout_height="81dp"
+                android:src="@drawable/profile_avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Icono Editar, reposicionado como overlay -->
+            <ImageView
+                android:id="@+id/imgEditarAvatar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@id/imgAvatar"
+                app:layout_constraintEnd_toEndOf="@id/imgAvatar" />
+
+            <LinearLayout
+                android:id="@+id/layoutCampos"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="Nombre"
-                android:textStyle="bold" />
+                android:layout_marginTop="28dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgEditarAvatar">
 
-            <EditText
-                android:id="@+id/etNombre"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="2"
-                android:background="#E0E0E0"
-                android:padding="8dp"
-                android:text="Rodrigo" />
-        </LinearLayout>
+                <!-- Cada fila: etiqueta + campo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Nombre"
+                        android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="0dp"
+                    <EditText
+                        android:id="@+id/etNombre"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:background="#E0E0E0"
+                        android:padding="8dp"
+                        android:text="Rodrigo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Apellidos"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etApellidos"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:background="#E0E0E0"
+                        android:padding="8dp"
+                        android:text="Díaz de Vivar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Teléfono"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etTelefono"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:background="#E0E0E0"
+                        android:padding="8dp"
+                        android:text="+34 600 123 456" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="País"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etPais"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:background="#E0E0E0"
+                        android:padding="8dp"
+                        android:text="España" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Email"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:background="#E0E0E0"
+                        android:padding="8dp"
+                        android:text="rodrigo@correo.com" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Contraseña"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="2"
+                        android:background="#E0E0E0"
+                        android:inputType="textPassword"
+                        android:padding="8dp"
+                        android:text="********" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Botón Guardar Cambios -->
+            <Button
+                android:id="@+id/btnGuardarCambios"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="Apellidos"
-                android:textStyle="bold" />
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="Guardar Cambios"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutCampos" />
 
-            <EditText
-                android:id="@+id/etApellidos"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="2"
-                android:background="#E0E0E0"
-                android:padding="8dp"
-                android:text="Díaz de Vivar" />
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="Teléfono"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/etTelefono"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="2"
-                android:background="#E0E0E0"
-                android:padding="8dp"
-                android:text="+34 600 123 456" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="País"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/etPais"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="2"
-                android:background="#E0E0E0"
-                android:padding="8dp"
-                android:text="España" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="Email"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/etEmail"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="2"
-                android:background="#E0E0E0"
-                android:padding="8dp"
-                android:text="rodrigo@correo.com" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="Contraseña"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/etPassword"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="2"
-                android:background="#E0E0E0"
-                android:inputType="textPassword"
-                android:padding="8dp"
-                android:text="********" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <!-- Botón Guardar Cambios -->
-    <Button
-        android:id="@+id/btnGuardarCambios"
-        android:layout_width="350dp"
+    <!-- Contenedor del Menú -->
+    <FrameLayout
+        android:id="@+id/fl_info_userdata_menu_container"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar Cambios"
-        android:backgroundTint="#C4F0C5"
-        app:layout_constraintTop_toBottomOf="@id/layoutCampos"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
