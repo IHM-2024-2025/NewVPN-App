@@ -58,7 +58,7 @@
     <string name="font_min_reached">Tamaño mínimo alcanzado</string>
 
     <!-- Información de contacto -->
-    <string name="info_email_label">Email:</string>
+    <string name="info_email_label" translatable="false">Email:</string>
     <string name="info_chat_label">Chat en vivo:</string>
     <string name="info_phone_label">Teléfono:</string>
     <string name="info_faq_label">Preguntas Frecuentes(FAQ):</string>
@@ -66,7 +66,7 @@
     <string name="info_name_label">Nombre:</string>
     <string name="info_description_label">Mensaje o descripción del problema:</string>
     <string name="info_contact_email">newVPNsupport@ubu.es</string>
-    <string name="info_name_default">Name</string>
+    <string name="info_name_default" translatable="false">Name</string>
     <string name="info_phone_number">947 25 87 00</string>
     <string name="info_send_message">Enviar Mensaje</string>
     <string name="info_connect">Conectar</string>
@@ -82,7 +82,7 @@
 
     <!-- Registro -->
     <string name="register_name_label">Nombre</string>
-    <string name="register_name_default">Name</string>
+    <string name="register_name_default" translatable="false">Name</string>
     <string name="register_surname_label">Apellidos</string>
     <string name="register_email_label">Correo Electrónico</string>
     <string name="register_phone_label">Teléfono</string>
@@ -103,9 +103,9 @@
     <string name="dns_example">Ejemplo: 8.8.8.8</string>
     <string name="ad_blocker">Bloqueo de publicidad</string>
     <string name="tracker_blocker">Bloqueo de rastreadores</string>
-    <string name="split_routing">Split Routing</string>
+    <string name="split_routing" translatable="false">Split Routing</string>
     <string name="split_routing_info">Información sobre Split Routing</string>
-    <string name="split_routing_title">Split Routing</string>
+    <string name="split_routing_title" translatable="false">Split Routing</string>
     <string name="split_routing_message">Split Routing permite seleccionar qué aplicaciones se conectan a través de la VPN y cuáles utilizan tu conexión normal a internet. Esto puede ser útil para aplicaciones que requieren acceso a servicios locales. Si está desactivado, todas las aplicaciones utilizarán la conexión de la VPN. Si está activado, solamente las aplicaciones que actives utilizarán la conexión de la VPN.</string>
     <string name="understood">Entendido</string>
     <string name="split_routing_apps">Aplicaciones para Split Routing</string>
@@ -122,7 +122,7 @@
     <string name="pay_title">Suscribirse</string>
     <string name="pay_subtitle">Seleccione su método de pago</string>
     <string name="pay_card_button">Pago con Tarjeta</string>
-    <string name="pay_paypal_button">PayPal</string>
+    <string name="pay_paypal_button" translatable="false">PayPal</string>
     <string name="pay_card_number">Número de tarjeta</string>
     <string name="pay_card_name">Nombre del titular</string>
     <string name="pay_card_expiry">Fecha de caducidad</string>
@@ -143,7 +143,7 @@
     <string name="pay_save">Ahorra 20%</string>
     <string name="pay_processing">Procesando pago…</string>
     <string name="pay_card_label">Tarjeta de crédito</string>
-    <string name="pay_paypal_label">PayPal</string>
+    <string name="pay_paypal_label" translatable="false">PayPal</string>
     <string name="pay_error_card_number">Número de tarjeta inválido</string>
     <string name="pay_error_card_name">Nombre del titular requerido</string>
     <string name="pay_error_card_expiry">Formato fecha inválido. Use MM/AA</string>
@@ -187,26 +187,26 @@
     <string name="my_account">Mi Cuenta</string>
     <string name="session_closed">Sesión cerrada correctamente</string>
     <string name="subscription_cancel">Solicitud de cancelación enviada</string>
-    <string name="user_name">Rodrigo Díaz de Vivar</string>
+    <string name="user_name" translatable="false">Rodrigo Díaz de Vivar</string>
     <string name="user_email">cid@alu.ubu.es</string>
     <string name="support_connection">Conectando con soporte…</string>
     <string name="error_country_page">Error al cargar la lista de países</string>
-    <string name="countriespage">CountriesPage</string>
+    <string name="countriespage" translatable="false">CountriesPage</string>
     <string name="error_country_page2">"Error al inicializar la página de países: "</string>
-    <string name="vpnconnectionprefs">VpnConnectionPrefs</string>
-    <string name="connection_type_string">connection_type</string>
-    <string name="custom_dns">custom_dns</string>
-    <string name="ad_blocker_string">ad_blocker</string>
-    <string name="tracker_blocker_string">tracker_blocker</string>
-    <string name="split_routing_string">split_routing</string>
-    <string name="split_routing_apps_string">split_routing_apps</string>
+    <string name="vpnconnectionprefs" translatable="false">VpnConnectionPrefs</string>
+    <string name="connection_type_string" translatable="false">connection_type</string>
+    <string name="custom_dns" translatable="false">custom_dns</string>
+    <string name="ad_blocker_string" translatable="false">ad_blocker</string>
+    <string name="tracker_blocker_string" translatable="false">tracker_blocker</string>
+    <string name="split_routing_string" translatable="false">split_routing</string>
+    <string name="split_routing_apps_string" translatable="false">split_routing_apps</string>
     <string name="perm_deleted">Permiso eliminado</string>
     <string name="preferencespage_title">PreferencesPage</string>
     <string name="share_url">Enlace de invitación</string>
     <string name="share_url_string">https://joseleelportfolio.vercel.app</string>
     <string name="message_send">Mensaje enviado</string>
     <string name="message_send_sucess">Tu mensaje ha sido enviado con éxito.</string>
-    <string name="ok">OK</string>
+    <string name="ok" translatable="false">OK</string>
     <string name="changes_saved">Cambios guardados</string>
     <string name="new_vpn">New VPN</string>
 
