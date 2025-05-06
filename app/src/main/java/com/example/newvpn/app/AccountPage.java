@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.newvpn.R;
+import com.example.newvpn.info.ContactPage;
 import com.example.newvpn.info.UserDataPage;
 import com.example.newvpn.monetize.PayPage;
 import com.example.newvpn.session.LoginPage;
@@ -80,8 +81,8 @@ public class AccountPage extends AppCompatActivity {
 
         // Botón de soporte
         btnSoporte.setOnClickListener(v -> {
-            Toast.makeText(this, R.string.support_connection, Toast.LENGTH_SHORT).show();
-        });
+            Intent intent = new Intent(AccountPage.this, ContactPage.class);
+            startActivity(intent);        });
     }
 
     private void loadUserData() {

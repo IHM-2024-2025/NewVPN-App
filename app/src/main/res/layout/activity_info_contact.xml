@@ -5,19 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <FrameLayout
+        android:id="@+id/fl_support_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/tv_info_email"
         android:layout_width="91dp"
         android:layout_height="33dp"
-        android:layout_marginTop="211dp"
+        android:layout_marginTop="68dp"
         android:text="@string/info_email_label"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
         android:id="@+id/tv_info_chat"
@@ -27,10 +33,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297" />
+        app:layout_constraintVertical_bias="0.298" />
 
     <TextView
         android:id="@+id/tv_info_telf"
@@ -47,22 +53,23 @@
 
     <TextView
         android:id="@+id/tv_info_faq"
-        android:layout_width="229dp"
-        android:layout_height="44dp"
+        android:layout_width="186dp"
+        android:layout_height="47dp"
         android:text="@string/info_faq_label"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
+        app:layout_constraintVertical_bias="0.399" />
 
     <TextView
         android:id="@+id/tv_info_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/info_contact_form_label"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +102,7 @@
         app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551" />
+        app:layout_constraintVertical_bias="0.567" />
 
     <TextView
         android:id="@+id/textView10"
@@ -105,38 +112,42 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608" />
+        app:layout_constraintVertical_bias="0.642" />
 
     <EditText
         android:id="@+id/et_info_description_form"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:text="Desarrolle su problema"
+        android:textSize="14sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.675" />
+        app:layout_constraintVertical_bias="0.712" />
 
     <EditText
         android:id="@+id/et_info_name_form"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/info_name_default"
+        android:text="Rorigo Díaz de Vivar"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.626"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.515" />
+        app:layout_constraintVertical_bias="0.516" />
 
     <TextView
         android:id="@+id/tv_info_telf_num"
@@ -150,145 +161,80 @@
 
     <Button
         android:id="@+id/bt_info_send_message"
-        android:layout_width="144dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="244dp"
-        android:layout_marginBottom="604dp"
+        android:layout_width="199dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-10dp"
         android:text="Conectar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.591"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.287" />
+        app:layout_constraintStart_toEndOf="@+id/tv_info_chat"
+        app:layout_constraintTop_toTopOf="@+id/tv_info_chat" />
 
     <Button
         android:id="@+id/bt_info_chat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="118dp"
-        android:layout_marginTop="678dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="147dp"
-        android:layout_marginBottom="188dp"
-        android:background="#2196F3"
         android:text="Enviar"
-        app:iconTint="#C31515"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.914"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:rippleColor="#2196F3"
-        app:strokeColor="#B81B1B" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="413dp"
-        android:layout_height="163dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="749dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/color_pink_ffc2f4" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="113dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="298dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="818dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintTop_toBottomOf="@+id/et_info_description_form" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="333dp"
         android:layout_height="20dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="135dp"
         android:layout_marginEnd="42dp"
-        android:layout_marginBottom="759dp"
         android:text="¿Necesitas ayuda? No dudes en contactarnos"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contacto"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="32dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.128" />
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="177dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="480dp" />
+        android:text="rdv@ubu.es"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/et_info_name_form" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
         android:text="newVPNsupport@ubu.es"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="211dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="869dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/util_arrow_left_24px" />
+        app:layout_constraintStart_toEndOf="@+id/tv_info_email"
+        app:layout_constraintTop_toTopOf="@+id/tv_info_email" />
 
     <ImageButton
         android:id="@+id/ir_faq"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="347dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="524dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="-8dp"
+        android:contentDescription="Botón para acceder a la página de preguntas frecuentes."
+        app:layout_constraintStart_toEndOf="@+id/tv_info_faq"
+        app:layout_constraintTop_toTopOf="@+id/tv_info_faq"
         app:srcCompat="@drawable/util_arrow_forward_24px" />
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="82dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="232dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="97dp"
-        android:layout_marginBottom="837dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <FrameLayout
+        android:id="@+id/fl_suppport_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_modernhouse" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

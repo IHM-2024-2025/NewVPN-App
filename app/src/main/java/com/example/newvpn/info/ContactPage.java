@@ -8,6 +8,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.newvpn.R;
+import com.example.newvpn.utils.HeaderHelper;
+import com.example.newvpn.utils.MenuHelper;
 
 public class ContactPage extends AppCompatActivity {
 
@@ -15,6 +17,11 @@ public class ContactPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_contact);
+        // Inyectar el header
+        HeaderHelper.injectHeader(this, R.id.fl_suppport_header_container,"Soporte");
+
+        // Inyectar el menú
+        MenuHelper.injectMenu(this, R.id.fl_support_menu_container);
 
         View tInfoSendMessage = findViewById(R.id.bt_info_send_message);
         View irFaq = findViewById(R.id.ir_faq);
