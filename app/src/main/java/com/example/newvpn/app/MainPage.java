@@ -1,5 +1,6 @@
 package com.example.newvpn.app;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -25,6 +26,8 @@ public class MainPage extends AppCompatActivity {
     private Runnable speedUpdateRunnable;
     private static final int MIN_SPEED = 30;
     private static final int MAX_SPEED = 99;
+    private static final String PREFS_NAME = "VpnPreferences";
+    private static final String VPN_STATE_KEY = "vpn_state";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +49,19 @@ public class MainPage extends AppCompatActivity {
         // Inicializar el generador de números aleatorios
         random = new Random();
 
-        // Establecer valores iniciales en 0 (VPN desactivada por defecto)
-        uploadSpeedTextView.setText("0");
-        downloadSpeedTextView.setText("0");
+        // Recuperar el estado guardado de la VPN
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        isVpnOn = settings.getBoolean(VPN_STATE_KEY, false);
+        
+        // Establecer el estado inicial según el valor recuperado
+        if (isVpnOn) {
+            innerCircle.setBackgroundResource(R.drawable.circle_green);
+            updateSpeeds(); // Iniciar con valores aleatorios si la VPN estaba activada
+        } else {
+            innerCircle.setBackgroundResource(R.drawable.circle_dark);
+            uploadSpeedTextView.setText("0");
+            downloadSpeedTextView.setText("0");
+        }
 
         // Configurar el Handler y Runnable para actualizar las velocidades cada segundo
         speedUpdateHandler = new Handler();
@@ -76,6 +89,12 @@ public class MainPage extends AppCompatActivity {
 
         vpnButton.setOnClickListener(v -> {
             isVpnOn = !isVpnOn;
+            
+            // Guardar el nuevo estado en SharedPreferences
+            SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, 0).edit();
+            editor.putBoolean(VPN_STATE_KEY, isVpnOn);
+            editor.apply();
+            
             if (isVpnOn) {
                 innerCircle.setBackgroundResource(R.drawable.circle_green);
                 Toast.makeText(this, R.string.vpn_on, Toast.LENGTH_SHORT).show();
