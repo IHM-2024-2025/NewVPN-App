@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.newvpn.R;
@@ -41,10 +42,10 @@ public class MainPage extends AppCompatActivity {
         // Obtener referencias a los TextViews de velocidad
         uploadSpeedTextView = findViewById(R.id.tv_mainpage_upload_num);
         downloadSpeedTextView = findViewById(R.id.tv_mainpage_download_num);
-        
+
         // Inicializar el generador de números aleatorios
         random = new Random();
-        
+
         // Configurar el Handler y Runnable para actualizar las velocidades cada segundo
         speedUpdateHandler = new Handler();
         speedUpdateRunnable = new Runnable() {
@@ -53,11 +54,11 @@ public class MainPage extends AppCompatActivity {
                 // Generar velocidades aleatorias entre MIN_SPEED y MAX_SPEED
                 int uploadSpeed = MIN_SPEED + random.nextInt(MAX_SPEED - MIN_SPEED + 1);
                 int downloadSpeed = MIN_SPEED + random.nextInt(MAX_SPEED - MIN_SPEED + 1);
-                
+
                 // Actualizar los TextViews con las nuevas velocidades
                 uploadSpeedTextView.setText(String.valueOf(uploadSpeed));
                 downloadSpeedTextView.setText(String.valueOf(downloadSpeed));
-                
+
                 // Programar la siguiente actualización en 1 segundo
                 speedUpdateHandler.postDelayed(this, 1000);
             }
@@ -67,19 +68,21 @@ public class MainPage extends AppCompatActivity {
             isVpnOn = !isVpnOn;
             if (isVpnOn) {
                 innerCircle.setBackgroundResource(R.drawable.circle_green);
+                Toast.makeText(this, R.string.vpn_on, Toast.LENGTH_SHORT).show();
             } else {
                 innerCircle.setBackgroundResource(R.drawable.circle_dark);
+                Toast.makeText(this, R.string.vpn_off, Toast.LENGTH_SHORT).show();
             }
         });
     }
-    
+
     @Override
     protected void onResume() {
         super.onResume();
         // Iniciar las actualizaciones cuando la actividad esté visible
         speedUpdateHandler.post(speedUpdateRunnable);
     }
-    
+
     @Override
     protected void onPause() {
         super.onPause();

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -73,13 +74,13 @@ public class CountriesPage extends AppCompatActivity implements CountryAdapter.O
     @Override
     public void onCountryClick(String countryName) {
         // Mostrar un mensaje cuando el usuario selecciona un país
-        Toast.makeText(this,"VPN cambiada a: "+countryName, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,getString(R.string.vpn_changed)+countryName, Toast.LENGTH_SHORT).show();
         // Mostrar una advertencia sobre la legislación de china
         if (countryName.equalsIgnoreCase(getString(R.string.country_china))) {
-            new androidx.appcompat.app.AlertDialog.Builder(this)
-                    .setTitle("Advertencia Legal")
-                    .setMessage("La legislación en China impone restricciones especiales sobre el uso de VPNs. Asegúrate de cumplir con las leyes locales.")
-                    .setPositiveButton("Entendido", null)
+            new AlertDialog.Builder(this)
+                    .setTitle(R.string.legal_title)
+                    .setMessage(R.string.legal_description_china)
+                    .setPositiveButton(R.string.understood_button, null)
                     .show();
         }
         // Actualizar el país seleccionado

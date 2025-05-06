@@ -239,4 +239,10 @@
     <string name="language_changed">Idioma cambiado a %s</string>
     <string name="language_not_available">Traducción no disponible</string>
     <string name="english">Inglés</string>
+    <string name="vpn_on">VPN Activada</string>
+    <string name="vpn_off">VPN Desactivada</string>
+    <string name="legal_title">Advertencia Legal</string>
+    <string name="legal_description_china">La legislación en China impone restricciones especiales sobre el uso de VPNs. Asegúrate de cumplir con las leyes locales.</string>
+    <string name="understood_button">Entendido</string>
+    <string name="vpn_changed">"VPN cambiada a: "</string>
 </resources>
