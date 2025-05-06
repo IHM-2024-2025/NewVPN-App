@@ -73,7 +73,15 @@ public class CountriesPage extends AppCompatActivity implements CountryAdapter.O
     @Override
     public void onCountryClick(String countryName) {
         // Mostrar un mensaje cuando el usuario selecciona un país
-
+        Toast.makeText(this,"VPN cambiada a: "+countryName, Toast.LENGTH_SHORT).show();
+        // Mostrar una advertencia sobre la legislación de china
+        if (countryName.equalsIgnoreCase(getString(R.string.country_china))) {
+            new androidx.appcompat.app.AlertDialog.Builder(this)
+                    .setTitle("Advertencia Legal")
+                    .setMessage("La legislación en China impone restricciones especiales sobre el uso de VPNs. Asegúrate de cumplir con las leyes locales.")
+                    .setPositiveButton("Entendido", null)
+                    .show();
+        }
         // Actualizar el país seleccionado
         currentCountry = countryName;
         countryAdapter.setSelectedCountry(countryName);

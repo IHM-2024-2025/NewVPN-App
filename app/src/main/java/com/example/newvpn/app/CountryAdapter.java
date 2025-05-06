@@ -92,5 +92,6 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
             countryRadioButton = itemView.findViewById(R.id.rb_country_selected);
             connectionQuality = itemView.findViewById(R.id.iv_connection_quality);
         }
+
     }
 }
