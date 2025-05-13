@@ -51,6 +51,7 @@
     <string name="share_icon">Share icon</string>
     <string name="font_max_reached">Maximun size reached</string>
     <string name="font_min_reached">Minimum size reached</string>
+    <string name="info_email_label">Email:</string>
     <string name="info_chat_label">"Live chat: "</string>
     <string name="info_phone_label">Telephone:</string>
     <string name="info_faq_label">Frequently Asked Questions(FAQ):</string>
@@ -58,6 +59,7 @@
     <string name="info_name_label">Name:</string>
     <string name="info_description_label">"Message or Description of the problem: "</string>
     <string name="info_contact_email">newVPNsupport@ubu.uk</string>
+    <string name="info_name_default">Name</string>
     <string name="info_phone_number">8947258700</string>
     <string name="info_send_message">Send Message</string>
     <string name="info_connect">Connect</string>
@@ -69,6 +71,7 @@
     <string name="login_register">Register</string>
     <string name="login_background">Wallpaper for log in session</string>
     <string name="register_name_label">Name</string>
+    <string name="register_name_default">Name</string>
     <string name="register_surname_label">Surname</string>
     <string name="register_email_label">Email</string>
     <string name="register_phone_label">Telephone</string>
