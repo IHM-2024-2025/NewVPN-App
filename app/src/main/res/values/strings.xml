@@ -276,4 +276,11 @@
     <string name="contact_faq">Preguntas frecuentes</string>
     <string name="contact_go_to_faq">Ir a FAQ</string>
     <string name="contact_explain_problem">Desarrolle su problema</string>
+    <string name="qu_es_una_vpn_y_para_qu_sirve">¿Qué es una VPN y para qué sirve?</string>
+    <string name="la_vpn_protege_contra_hackers_y_malware">¿La VPN protege contra hackers y malware?</string>
+    <string name="puedo_usarla_para_ver_contenido_bloqueado_en_mi_pa_s">¿Puedo usarla para ver contenido bloqueado en mi país?</string>
+    <string name="c_mo_instalo_y_configuro_la_vpn_en_mi_dispositivo">¿Cómo instalo y configuro la VPN en mi dispositivo?</string>
+    <string name="c_mo_cancelo_mi_suscripci_n_o_actualizo_mi_plan">¿Cómo cancelo mi suscripción o actualizo mi plan?</string>
+    <string name="por_qu_mi_conexi_n_es_m_s_lenta_con_la_vpn">¿Por qué es mi conexión más lenta con l</string>
+    <string name="por_qu_mi_conexi_n_es_m_s_lenta_con_la_vpn">¿Por qué es mi conexión más lenta con la VPN?</string>
 </resources>
