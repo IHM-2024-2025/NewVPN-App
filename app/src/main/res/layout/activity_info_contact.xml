@@ -19,7 +19,7 @@
         android:id="@+id/textView11"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="¿Necesitas ayuda? No dudes en contactarnos"
+        android:text="@string/contact_need_help"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp"
@@ -51,7 +51,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Información de contacto"
+                android:text="@string/contact_contact_info"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp" />
@@ -66,13 +66,13 @@
                     android:id="@+id/tv_info_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Email:"
+                    android:text="@string/email_two_points"
                     android:textStyle="bold" />
                 <TextView
                     android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="newVPNsupport@ubu.es"
+                    android:text="@string/newvpn_email"
                     android:layout_marginStart="8dp" />
             </LinearLayout>
 
@@ -86,13 +86,13 @@
                     android:id="@+id/tv_info_telf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Teléfono:"
+                    android:text="@string/phone_two_points"
                     android:textStyle="bold" />
                 <TextView
                     android:id="@+id/tv_info_telf_num"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+34 947 25 89 00"
+                    android:text="@string/info_phone_number"
                     android:layout_marginStart="8dp" />
             </LinearLayout>
 
@@ -108,14 +108,14 @@
                     android:id="@+id/tv_info_chat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Chat en vivo"
+                    android:text="@string/contact_live_chat"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/bt_info_send_message"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Conectar"
+                    android:text="@string/contactconnect"
                     android:layout_marginStart="16dp" />
             </LinearLayout>
 
@@ -129,7 +129,7 @@
                     android:id="@+id/tv_info_faq"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Preguntas frecuentes"
+                    android:text="@string/contact_faq"
                     android:textStyle="bold" />
 
                 <ImageButton
@@ -137,7 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="48sp"
                     android:layout_marginStart="8dp"
-                    android:contentDescription="Ir a FAQ"
+                    android:contentDescription="@string/contact_go_to_faq"
                     android:src="@drawable/util_arrow_forward_24px" />
             </LinearLayout>
 
@@ -181,20 +181,20 @@
                 android:id="@+id/et_info_name_form"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Nombre" />
+                android:hint="@string/name" />
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email:"
+                android:text="@string/email_two_points"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextText"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Correo electrónico" />
+                android:hint="@string/info_email_label" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -208,14 +208,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:gravity="top"
-                android:hint="Desarrolle su problema"
+                android:hint="@string/contact_explain_problem"
                 android:inputType="textMultiLine" />
 
             <Button
                 android:id="@+id/bt_info_chat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enviar" />
+                android:text="@string/info_send_message" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
