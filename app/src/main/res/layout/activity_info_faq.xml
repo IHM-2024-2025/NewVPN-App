@@ -29,8 +29,8 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="404dp"
-        android:layout_height="51dp"
+        android:layout_width="377dp"
+        android:layout_height="52dp"
         android:layout_marginTop="3dp"
         android:text="Una VPN(Red Privada Virtual) cifra tu conexión y oculta tu IP para mejorar la privacidad,seguridad y permitir el acceso a contenido restringido por ubicación."
         android:textSize="12sp"
@@ -40,8 +40,8 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="48dp"
         android:layout_marginTop="3dp"
         android:text="El cifrado y la distancia al servidor pueden afectar la velocidad. Para mejorar el rendimiento, elige un servidor cercano y usa una conexión estable."
         android:textSize="12sp"
@@ -62,8 +62,8 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="34dp"
         android:layout_marginTop="3dp"
         android:text="Si, puedes acceder a plataformas de streaming y sitios restringidos eligiendo un servidor en otro país. "
         android:textSize="12sp"
