@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">NewVPN App</string>
-    <string name="creater1">José Gallardo</string>
-    <string name="creater2">Tatiana Bejenaru</string>
     <string name="app_title">NewVPN</string>
     <string name="iv_decoration">This is a decorative image</string>
     <string name="loading_content">Loading content...</string>
     <string name="plantitle">Template</string>
     <string name="not_implemented">Not yet implemented</string>
     <string name="page_not_available">Page not available</string>
-    <string name="creater3">"Laura Rodríguez "</string>
-    <string name="creater4">Eva Tamayo</string>
     <string name="menu_home">Home</string>
     <string name="menu_countries">Countries</string>
     <string name="menu_account">Account</string>
@@ -44,8 +40,8 @@
     <string name="reduce_size">Downsize</string>
     <string name="increase_size">Increase size</string>
     <string name="spanish">Spanish</string>
-    <string name="permissions">Permits</string>
-    <string name="permissions_title">Permits</string>
+    <string name="permissions">Permissions</string>
+    <string name="permissions_title">Permissions</string>
     <string name="invite_friend">Invite a friend</string>
     <string name="arrow_forward">Right arrow</string>
     <string name="share_icon">Share icon</string>
@@ -76,7 +72,7 @@
     <string name="register_password_label">Password</string>
     <string name="register_confirm_password_label">Confirm Password</string>
     <string name="register_accept_terms">"I accept the "</string>
-    <string name="register_terms_and_conditions">terms and conditions of use</string>
+    <string name="register_terms_and_conditions">Terms and conditions of use</string>
     <string name="register_button">Register</string>
     <string name="register_account_exists">Already have an account?</string>
     <string name="register_goto_login">Login</string>
@@ -136,9 +132,9 @@
     <string name="pay_card_icon_description">Credit Card Icon</string>
     <string name="pay_paypal_icon_description">PayPal Icon</string>
     <string name="permission_contacts">👥 Contacts</string>
-    <string name="permission_location">📍Location</string>
+    <string name="permission_location">📍 Location</string>
     <string name="permission_microphone">🎤 Microphone</string>
-    <string name="permission_camera">📷Camera</string>
+    <string name="permission_camera">📷 Camera</string>
     <string name="permission_rationale">This permission is necessary for the correct functioning of the application</string>
     <string name="permission_denied">Permission refused. Some functions may be unavailable.</string>
     <string name="permission_granted">Permission granted</string>

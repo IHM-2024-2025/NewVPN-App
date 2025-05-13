@@ -9,10 +9,10 @@
     <string name="page_not_available">Página no disponible</string>
 
     <!-- Autores -->
-    <string name="creater1">José Gallardo</string>
-    <string name="creater2">Tatiana Bejenaru</string>
-    <string name="creater3">Laura Rodríguez</string>
-    <string name="creater4">Eva Tamayo</string>
+    <string name="creater1" translatable="false">José Gallardo</string>
+    <string name="creater2" translatable="false">Tatiana Bejenaru</string>
+    <string name="creater3" translatable="false">Laura Rodríguez</string>
+    <string name="creater4" translatable="false">Eva Tamayo</string>
 
     <!-- Menú de navegación -->
     <string name="menu_home">Inicio</string>
@@ -26,7 +26,7 @@
     <string name="welcome_user">[Nombre y apellidos]</string>
     <string name="upload">Subir</string>
     <string name="download">Descargar</string>
-    <string name="speed_value">33.3</string>
+    <string name="speed_value">33,3</string>
     <string name="speed_units">KB/s</string>
     <string name="upload_icon">Icono de subida</string>
     <string name="download_icon">Icono de descarga</string>
@@ -203,7 +203,7 @@
     <string name="perm_deleted">Permiso eliminado</string>
     <string name="preferencespage_title">PreferencesPage</string>
     <string name="share_url">Enlace de invitación</string>
-    <string name="share_url_string">https://joseleelportfolio.vercel.app</string>
+    <string name="share_url_string" translatable="false">https://joseleelportfolio.vercel.app</string>
     <string name="message_send">Mensaje enviado</string>
     <string name="message_send_sucess">Tu mensaje ha sido enviado con éxito.</string>
     <string name="ok" translatable="false">OK</string>
@@ -233,8 +233,8 @@
 
     <!-- Selección de idioma -->
     <string name="language_select_title">Seleccionar idioma</string>
-    <string name="language_spanish">Español</string>
-    <string name="language_english">Inglés</string>
+    <string name="language_spanish" translatable="false">Español</string>
+    <string name="language_english" translatable="false">English</string>
     <string name="language_cancel">Cancelar</string>
     <string name="language_changed">Idioma cambiado a %s</string>
     <string name="language_not_available">Traducción no disponible</string>
