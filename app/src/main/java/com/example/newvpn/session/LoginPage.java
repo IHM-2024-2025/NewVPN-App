@@ -42,8 +42,8 @@ public class LoginPage extends AppCompatActivity {
         // Añadir listener para el texto "He olvidado mi contraseña"
         TextView forgotPasswordTextView = findViewById(R.id.tv_session_login_forgotpassword);
         forgotPasswordTextView.setOnClickListener(v -> {
-            // Mostrar un Toast indicando que la función no está implementada
-            Toast.makeText(LoginPage.this, getString(R.string.not_implemented), Toast.LENGTH_SHORT).show();
+            // Navegar a la página de recuperación de contraseña
+            ButtonsNavigation.navigateTo(LoginPage.this, RecoverPasswordPage.class);
         });
     }
 }
