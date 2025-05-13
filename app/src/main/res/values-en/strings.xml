@@ -187,4 +187,12 @@
     <string name="terms_content">Welcome to NewVPN. These Terms and Conditions of Use (\'Terms\') govern the access and use of our application and VPN services (\'Service\'). By using our Service, you agree to comply with these Terms. If you do not agree, we ask you not to use our Service. The Service is designed to provide privacy and security in navigation; however, its use for illegal activities is prohibited, including but not limited to the downloading and distribution of unauthorized copyrighted content, cyber attacks, hacking, phishing activities, fraud, spam or any criminal activity. The User may need to create an account to access certain services and is responsible for maintaining the security of their access credentials. The Provider will make reasonable efforts to ensure the availability of the Service, but does not guarantee its uninterrupted or error-free operation. The use of the Service is subject to our Privacy Policy, which establishes how we collect, use and protect the User\'s information. The Supplier will not be responsible for direct, indirect, or consequential damages derived from the use or inability to use the Service. We reserve the right to modify these Terms at any time, notifying any changes, and continued use of the Service will constitute acceptance of the new terms. These Terms are governed by the laws of your country and any dispute will be resolved before the courts of the competent authority. For any questions about these Terms, you can contact us at NewVPNsupport@ubu.es By using NewVPN, the User declares to have read, understood and accepted these Terms and Conditions of Use.</string>
     <string name="vpn_on">VPN On</string>
     <string name="vpn_changed">"VPN changed to: "</string>
+    <string name="new_password">New password</string>
+    <string name="recover_password_message">An email has been sent to your email account.</string>
+    <string name="error_no_email">Please enter your email</string>
+    <string name="error_invalid_email">Please enter a valid email</string>
+    <string name="error_acept_emails">You must agree to receive emails to continue</string>
+    <string name="recover_password_acept_emails">I agree to receive recovery emails</string>
+    <string name="recover_password">Recover password</string>
+    <string name="recover_password_go_to_login">Back to Login</string>
 </resources>
