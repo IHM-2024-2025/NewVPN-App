@@ -245,4 +245,12 @@
     <string name="legal_description_china">La legislación en China impone restricciones especiales sobre el uso de VPNs. Asegúrate de cumplir con las leyes locales.</string>
     <string name="understood_button">Entendido</string>
     <string name="vpn_changed">"VPN cambiada a: "</string>
+    <string name="new_password">Nueva contraseña</string>
+    <string name="recover_password_message">Se ha enviado un correo de recuperación a su dirección de email</string>
+    <string name="error_no_email">Por favor ingrese su email</string>
+    <string name="error_invalid_email">Por favor ingrese un email válido</string>
+    <string name="error_acept_emails">Debe aceptar recibir emails para continuar</string>
+    <string name="recover_password_acept_emails">Acepto recibir emails de recuperación</string>
+    <string name="recover_password">Recuperar Contraseña</string>
+    <string name="recover_password_go_to_login">Volver a iniciar sesión</string>
 </resources>
