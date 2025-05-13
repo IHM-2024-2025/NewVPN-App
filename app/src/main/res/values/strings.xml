@@ -266,4 +266,14 @@
     <string name="username">Apellidos</string>
     <string name="hided_password" translatable="false">********</string>
     <string name="save_changes">Guardar cambios</string>
+    <string name="contact_need_help">¿Necesitas ayuda? No dudes en contactarnos</string>
+    <string name="contact_contact_info">Información de contacto</string>
+    <string name="email_two_points">Correo electrónico:</string>
+    <string name="newvpn_email" translatable="false">newVPNsupport@ubu.es</string>
+    <string name="phone_two_points">Teléfono:</string>
+    <string name="contact_live_chat">Chat en vivo</string>
+    <string name="contactconnect">Conectar</string>
+    <string name="contact_faq">Preguntas frecuentes</string>
+    <string name="contact_go_to_faq">Ir a FAQ</string>
+    <string name="contact_explain_problem">Desarrolle su problema</string>
 </resources>

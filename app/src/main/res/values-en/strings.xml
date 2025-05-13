@@ -211,4 +211,13 @@
     <string name="name">Name</string>
     <string name="username">Surname</string>
     <string name="save_changes">Save changes</string>
+    <string name="contact_need_help">Do you need help? Don\'t hesitate to contact us</string>
+    <string name="contact_contact_info">Contact info</string>
+    <string name="email_two_points">Email</string>
+    <string name="phone_two_points">Phone:</string>
+    <string name="contact_live_chat">Live chat</string>
+    <string name="contactconnect">Connect</string>
+    <string name="contact_faq">FAQ</string>
+    <string name="contact_go_to_faq">Go to FAQ</string>
+    <string name="contact_explain_problem">Explain your problem</string>
 </resources>
