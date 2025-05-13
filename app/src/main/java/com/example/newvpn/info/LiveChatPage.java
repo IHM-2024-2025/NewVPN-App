@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.newvpn.R;
+import com.example.newvpn.utils.MenuHelper;
 
 public class LiveChatPage extends AppCompatActivity {
 
@@ -26,5 +27,8 @@ public class LiveChatPage extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        
+        // Inyectar el menú
+        MenuHelper.injectMenu(this, R.id.fl_livechat_menu_container);
     }
 }

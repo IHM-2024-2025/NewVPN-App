@@ -11,78 +11,60 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/livechat_chat" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="126dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="785dp"
-        android:text="Estamos buscando un operador libre."
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="129dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="766dp"
-        android:text="Por favor, mantengase a la espera."
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/volver_chat"
-        android:layout_width="129dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="710dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="148dp"
-        android:text="Volver"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/util_loading_spinner"
-        tools:layout_editor_absoluteY="68dp" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="98dp"
-        android:layout_marginEnd="309dp"
-        android:layout_marginBottom="756dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="112dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/util_loading_spinner" />
+
+    <TextView
+        android:id="@+id/tv_livechat_searching_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/livechat_searching_operator"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/livechat_wait"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_livechat_searching_operator"
+        app:layout_constraintTop_toBottomOf="@+id/tv_livechat_searching_operator" />
+
+    <Button
+        android:id="@+id/volver_chat"
+        android:layout_width="129dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="116dp"
+        android:text="@string/go_back"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/fl_livechat_menu_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
