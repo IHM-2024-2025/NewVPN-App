@@ -171,7 +171,7 @@
                     android:id="@+id/tv_current_language"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/spanish"
+                    android:text="@string/language_spanish"
                     android:textColor="#888888"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
