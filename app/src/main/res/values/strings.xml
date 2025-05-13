@@ -262,4 +262,8 @@
     <string name="faq_config_your_acount">Puedes gestionar tu suscripción desde la configuración de tu cuenta en la app o en la tienda de aplicaciones.</string>
     <string name="livechat_searching_operator">Estamos buscando un operador libre.</string>
     <string name="livechat_wait">Por favor, mantengase a la espera.</string>
+    <string name="name">Nombre</string>
+    <string name="username">Apellidos</string>
+    <string name="hided_password" translatable="false">********</string>
+    <string name="save_changes">Guardar cambios</string>
 </resources>

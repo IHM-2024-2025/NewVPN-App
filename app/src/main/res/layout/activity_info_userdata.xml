@@ -67,7 +67,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:text="Nombre"
+                        android:text="@string/name"
                         android:textStyle="bold" />
 
                     <EditText
@@ -91,7 +91,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:text="Apellidos"
+                        android:text="@string/username"
                         android:textStyle="bold" />
 
                     <EditText
@@ -115,7 +115,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:text="Teléfono"
+                        android:text="@string/info_phone_label"
                         android:textStyle="bold" />
 
                     <EditText
@@ -125,7 +125,7 @@
                         android:layout_weight="2"
                         android:background="#E0E0E0"
                         android:padding="8dp"
-                        android:text="+34 600 123 456" />
+                        android:text="@string/info_phone_number" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -139,7 +139,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:text="País"
+                        android:text="@string/countries_title"
                         android:textStyle="bold" />
 
                     <EditText
@@ -149,7 +149,7 @@
                         android:layout_weight="2"
                         android:background="#E0E0E0"
                         android:padding="8dp"
-                        android:text="España" />
+                        android:text="@string/country_spain" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -163,7 +163,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:text="Email"
+                        android:text="@string/info_email_label"
                         android:textStyle="bold" />
 
                     <EditText
@@ -173,7 +173,7 @@
                         android:layout_weight="2"
                         android:background="#E0E0E0"
                         android:padding="8dp"
-                        android:text="rodrigo@correo.com" />
+                        android:text="@string/user_email" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -187,7 +187,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:text="Contraseña"
+                        android:text="@string/login_password_label"
                         android:textStyle="bold" />
 
                     <EditText
@@ -198,7 +198,7 @@
                         android:background="#E0E0E0"
                         android:inputType="textPassword"
                         android:padding="8dp"
-                        android:text="********" />
+                        android:text="@string/hided_password" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -210,7 +210,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:backgroundTint="@android:color/holo_green_light"
-                android:text="Guardar Cambios"
+                android:text="@string/save_changes"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layoutCampos" />

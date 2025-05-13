@@ -206,4 +206,9 @@
     <string name="faq_what_you_can_do">Yes, you can access streaming platforms and restricted sites by choosing a server in another country.</string>
     <string name="faq_download_app">Download the app from the official shop, log in (if necessary) and select a server to connect with a single tap.</string>
     <string name="faq_config_your_acount">You can manage your subscription from your account settings in the app or in the app shop.</string>
+    <string name="livechat_searching_operator">We are looking for a free operator.</string>
+    <string name="livechat_wait">Please stand by.</string>
+    <string name="name">Name</string>
+    <string name="username">Surname</string>
+    <string name="save_changes">Save changes</string>
 </resources>
