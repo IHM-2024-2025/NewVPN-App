@@ -39,7 +39,7 @@ public class RecoverPasswordPage extends AppCompatActivity {
                 // Mostrar Toast de éxito
                 Toast.makeText(RecoverPasswordPage.this, 
                         R.string.recover_password_message,
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_LONG).show();
                 
                 // Navegar a la página de login después de 1 segundos
                 new Handler().postDelayed(() -> {
