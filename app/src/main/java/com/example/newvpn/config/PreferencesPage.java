@@ -210,7 +210,7 @@ public class PreferencesPage extends AppCompatActivity {
             editor.apply();
             
             // Mostrar mensaje de cambio de idioma
-            String languageName = languageCode.equals("es") ? 
+            String languageName = languageCode.equals("es") ?
                     getString(R.string.language_spanish) : getString(R.string.language_english);
             
             Toast.makeText(this, 
@@ -232,7 +232,7 @@ public class PreferencesPage extends AppCompatActivity {
     private void loadSavedLanguage() {
         try {
             SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-            String languageCode = settings.getString(LANGUAGE_KEY, "es"); // Español por defecto
+            String languageCode = settings.getString(LANGUAGE_KEY, "en"); // Inglés por defecto
             
             Resources resources = getResources();
             Configuration configuration = resources.getConfiguration();
