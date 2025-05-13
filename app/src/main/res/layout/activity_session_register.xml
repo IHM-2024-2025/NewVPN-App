@@ -5,266 +5,274 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="394dp"
-        android:layout_height="514dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_session_register_terms"
+    <FrameLayout
+        android:id="@+id/fl_register_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Campo Nombre -->
+    <LinearLayout
+        android:id="@+id/linearLayout_name"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="120dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Avatar -->
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layoutCampos">
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Nombre"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="Confirmar contraseña"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/pt_session_register_password2"
-                android:layout_width="240dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:autofillHints="password"
-                android:ems="10"
-                android:hint="@string/register_password_label"
-                android:inputType="textPassword" />
-        </LinearLayout>
-
-        <!-- Icono Editar, reposicionado como overlay -->
-
-        <LinearLayout
-            android:id="@+id/layoutCampos"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/pt_session_register_name"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="104dp">
+            android:layout_weight="1"
+            android:autofillHints="name"
+            android:ems="10"
+            android:hint="@string/register_country_label"
+            android:inputType="text"
+            android:text="@string/register_name_default" />
+    </LinearLayout>
 
-            <!-- Cada fila: etiqueta + campo -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:text="Nombre"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/pt_session_register_country"
-                    android:layout_width="104dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:autofillHints="country"
-                    android:ems="10"
-                    android:hint="@string/register_country_label"
-                    android:inputType="text"
-                    android:text="@string/register_name_default" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:text="Apellidos"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/pt_session_register_country2"
-                    android:layout_width="108dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:autofillHints="country"
-                    android:ems="10"
-                    android:hint="@string/register_country_label"
-                    android:inputType="text"
-                    android:text="@string/register_name_default" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:text="Teléfono"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/pt_session_register_tlf"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="phone"
-                    android:ems="10"
-                    android:hint="@string/register_phone_label"
-                    android:inputType="phone" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:text="País"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/pt_session_register_country3"
-                    android:layout_width="103dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:autofillHints="country"
-                    android:ems="10"
-                    android:hint="@string/register_country_label"
-                    android:inputType="text"
-                    android:text="@string/register_name_default" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:text="Email"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/pt_session_login_email"
-                    android:layout_width="247dp"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="emailAddress"
-                    android:ems="10"
-                    android:hint="@string/login_email_label"
-                    android:inputType="textEmailAddress" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:text="Contraseña"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/pt_session_register_password2"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:autofillHints="password"
-                    android:ems="10"
-                    android:hint="@string/register_password_label"
-                    android:inputType="textPassword" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- Botón Guardar Cambios -->
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <!-- Campo Apellidos -->
     <LinearLayout
-        android:id="@+id/linearLayout9"
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout_lastname"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_name">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Apellidos"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/pt_session_register_lastname"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints="familyName"
+            android:ems="10"
+            android:hint="@string/register_country_label"
+            android:inputType="text"
+            android:text="@string/register_name_default" />
+    </LinearLayout>
+
+    <!-- Campo Teléfono -->
+    <LinearLayout
+        android:id="@+id/linearLayout_phone"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_lastname">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Teléfono"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/pt_session_register_tlf"
+            android:layout_width="263dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="phone"
+            android:ems="10"
+            android:hint="@string/register_phone_label"
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <!-- Campo Email -->
+    <LinearLayout
+        android:id="@+id/linearLayout_email"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_phone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Email"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/pt_session_login_email"
+            android:layout_width="263dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="emailAddress"
+            android:ems="10"
+            android:hint="@string/login_email_label"
+            android:inputType="textEmailAddress" />
+    </LinearLayout>
+
+    <!-- Campo País -->
+    <LinearLayout
+        android:id="@+id/linearLayout_country"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_email">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="País"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/pt_session_register_country"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints="country"
+            android:ems="10"
+            android:hint="@string/register_country_label"
+            android:inputType="text"
+            android:text="@string/register_name_default" />
+    </LinearLayout>
+
+    <!-- Campo Contraseña -->
+    <LinearLayout
+        android:id="@+id/linearLayout_password"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_country">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Contraseña"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/pt_session_register_password"
+            android:layout_width="263dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:ems="10"
+            android:hint="@string/register_password_label"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <!-- Campo Confirmar contraseña -->
+    <LinearLayout
+        android:id="@+id/linearLayout_confirm_password"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_password">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Confirmar contraseña"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/pt_session_register_confirm_password"
+            android:layout_width="263dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:ems="10"
+            android:hint="@string/register_password_label"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <!-- Términos y condiciones -->
+    <TextView
+        android:id="@+id/tv_session_register_terms"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" />
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/register_terms_and_conditions"
+        android:textColor="@android:color/holo_blue_dark"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_session_register_terms"
+        app:layout_constraintStart_toEndOf="@+id/cb_session_register_terms"
+        app:layout_constraintTop_toTopOf="@+id/cb_session_register_terms" />
 
     <CheckBox
         android:id="@+id/cb_session_register_terms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
         android:text="@string/register_accept_terms"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="558dp" />
+        app:layout_constraintEnd_toStartOf="@+id/tv_session_register_terms"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_confirm_password" />
 
+    <!-- Botón de registro -->
     <Button
         android:id="@+id/bt_session_register_register"
         android:layout_width="222dp"
         android:layout_height="47dp"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="95dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="24dp"
         android:text="@string/register_button"
-        app:layout_constraintBottom_toTopOf="@+id/ll_login_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cb_session_register_terms" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_session_register_terms" />
 
-    <TextView
-        android:id="@+id/tv_session_register_terms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="@string/register_terms_and_conditions"
-        android:textColor="@android:color/holo_blue_dark"
-        tools:layout_editor_absoluteX="171dp"
-        tools:layout_editor_absoluteY="573dp" />
-
+    <!-- Enlace a inicio de sesión -->
     <LinearLayout
         android:id="@+id/ll_login_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_session_register_register">
+        app:layout_constraintTop_toBottomOf="@+id/bt_session_register_register"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/tv_session_register_login"
