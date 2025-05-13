@@ -3,7 +3,7 @@
     <string name="app_name">NewVPN App</string>
     <string name="app_title">NewVPN</string>
     <string name="iv_decoration">This is a decorative image</string>
-    <string name="loading_content">Loading content...</string>
+    <string name="loading_content">Loading content…</string>
     <string name="plantitle">Template</string>
     <string name="not_implemented">Not yet implemented</string>
     <string name="page_not_available">Page not available</string>
@@ -144,7 +144,7 @@
     <string name="permission_granted">Permission granted</string>
     <string name="go_to_settings">Go to Settings</string>
     <string name="cancelar_suscripci_n">Unsubscribe</string>
-    <string name="fecha_de_renovaci_n_31_12_2025">Renewal Date: 31-12-2025</string>
+    <string name="fecha_de_renovaci_n_31_12_2025">Renewal Date: 31–12–2025</string>
     <string name="tu_plan_actual_plan_normal">Your current plan: Normal</string>
     <string name="Suscribirse">Subscribe</string>
     <string name="precio_actual_5_al_mes">Current prize: 4,99£/month</string>
@@ -168,7 +168,7 @@
     <string name="my_account">My Account</string>
     <string name="session_closed">Session closed successfully</string>
     <string name="subscription_cancel">Cancellation Request Sent</string>
-    <string name="support_connection">Connecting with support...</string>
+    <string name="support_connection">Connecting with support…</string>
     <string name="error_country_page">Error loading list of countries</string>
     <string name="error_country_page2">Error initialising country page</string>
     <string name="perm_deleted">Permit Deleted</string>

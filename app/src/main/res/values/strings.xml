@@ -253,4 +253,11 @@
     <string name="recover_password_acept_emails">Acepto recibir emails de recuperación</string>
     <string name="recover_password">Recuperar Contraseña</string>
     <string name="recover_password_go_to_login">Volver a iniciar sesión</string>
+    <string name="go_back">Volver</string>
+    <string name="faq_what_Is_vpn">Una VPN(Red Privada Virtual) cifra tu conexión y oculta tu IP para mejorar la privacidad,seguridad y permitir el acceso a contenido restringido por ubicación.</string>
+    <string name="faq_choose_country">El cifrado y la distancia al servidor pueden afectar la velocidad. Para mejorar el rendimiento, elige un servidor cercano y usa una conexión estable.</string>
+    <string name="faq_what_we_do">Si, cifra tu conexión para evitar ataques, pero no sustituye un antivirus, por lo que recomendamos usar ambos.</string>
+    <string name="faq_what_you_can_do">Si, puedes acceder a plataformas de streaming y sitios restringidos eligiendo un servidor en otro país.</string>
+    <string name="faq_download_app">Descarga la app desde la tienda oficial, inicia sesión (si es necesario) y selecciona un servidor para conectarte con un solo toque.</string>
+    <string name="faq_config_your_acount">Puedes gestionar tu suscripción desde la configuración de tu cuenta en la app o en la tienda de aplicaciones.</string>
 </resources>
