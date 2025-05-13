@@ -40,8 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="@string/terms_content"
-                android:textIsSelectable="true" />
+                android:textIsSelectable="false" />
         </ScrollView>
     </androidx.cardview.widget.CardView>
 
@@ -52,7 +51,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Volver"
+        android:text="@string/go_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

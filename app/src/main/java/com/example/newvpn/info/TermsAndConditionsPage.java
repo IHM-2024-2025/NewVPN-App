@@ -7,84 +7,99 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.newvpn.R;
 import com.example.newvpn.utils.HeaderHelper;
 
+/**
+ * Actividad que muestra los términos y condiciones de la aplicación.
+ */
 public class TermsAndConditionsPage extends AppCompatActivity {
     private static final String TAG = "TermsAndConditions";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
         try {
-            super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_info_termsandconditions);
             
-            // Configurar el encabezado de forma segura
+            // Configurar el encabezado
             setupHeader();
             
-            // Verificar y configurar el contenido
+            // Cargar el contenido
             setupContent();
             
             // Configurar el botón para volver
             setupBackButton();
         } catch (Exception e) {
-            Log.e(TAG, "Error al inicializar la actividad: " + e.getMessage());
+            Log.e(TAG, "Error al inicializar la actividad", e);
             Toast.makeText(this, "Error al cargar la página. Por favor, inténtelo de nuevo.", Toast.LENGTH_SHORT).show();
             finish();
         }
     }
     
+    /**
+     * Configura el encabezado de la página utilizando HeaderHelper
+     */
     private void setupHeader() {
         try {
-            // Inyectar el header personalizado usando HeaderHelper
-            HeaderHelper.injectHeader(this, R.id.headerContainer, getString(R.string.terms_title));
-            Log.d(TAG, "Header inyectado correctamente");
+            HeaderHelper.injectHeader(this, R.id.headerContainer, getString(R.string.register_terms_and_conditions));
         } catch (Exception e) {
-            Log.e(TAG, "Error al inyectar el header: " + e.getMessage(), e);
+            // No terminamos la actividad ya que podemos seguir sin el header
             Toast.makeText(this, "Error al cargar el encabezado", Toast.LENGTH_SHORT).show();
         }
     }
     
+    /**
+     * Carga el texto de los términos y condiciones desde los recursos
+     */
     private void setupContent() {
-        try {
-            TextView contentView = findViewById(R.id.tvTermsContent);
-            if (contentView != null) {
-                // Asegurarse de que el contenido se carga correctamente
-                getResources().getString(R.string.terms_content);
-                contentView.setText(R.string.terms_content);
+        TextView contentView = findViewById(R.id.tvTermsContent);
+        if (contentView != null) {
+            try {
+                String termsContent = getString(R.string.terms_content);
+                contentView.setText(termsContent);
+            } catch (Exception e) {
+                Log.e(TAG, "Error al cargar el texto de términos y condiciones", e);
             }
-        } catch (Exception e) {
-            Log.e(TAG, "Error al configurar el contenido: " + e.getMessage());
+        } else {
+            Log.e(TAG, "No se encontró el TextView para el contenido");
         }
     }
     
+    /**
+     * Configura el botón para volver a la pantalla anterior
+     */
     private void setupBackButton() {
-        try {
-            Button backButton = findViewById(R.id.btnBack);
-            if (backButton != null) {
-                backButton.setOnClickListener(v -> onBackPressed());
-            }
-        } catch (Exception e) {
-            Log.e(TAG, "Error al configurar el botón de retorno: " + e.getMessage());
+        Button backButton = findViewById(R.id.btnBack);
+        if (backButton != null) {
+            backButton.setOnClickListener(v -> {
+                try {
+                    Log.d(TAG, "Botón de retorno pulsado");
+                    finish();
+                } catch (Exception e) {
+                    Log.e(TAG, "Error al procesar clic en botón de retorno", e);
+                    finish();
+                }
+            });
+        } else {
+            Log.e(TAG, "No se encontró el botón de retorno");
         }
     }
     
     @Override
     public void onBackPressed() {
-        try {
-            super.onBackPressed();
-        } catch (Exception e) {
-            Log.e(TAG, "Error al ejecutar onBackPressed: " + e.getMessage());
-            finish();
-        }
+        finish();
     }
     
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
+            Log.d(TAG, "Botón de navegación pulsado");
+            finish();
             return true;
         }
         return super.onOptionsItemSelected(item);
