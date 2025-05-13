@@ -18,7 +18,7 @@ public class ContactPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_contact);
         // Inyectar el header
-        HeaderHelper.injectHeader(this, R.id.fl_suppport_header_container,"Soporte");
+        HeaderHelper.injectHeader(this, R.id.fl_suppport_header_container,getString(R.string.support));
 
         // Inyectar el menú
         MenuHelper.injectMenu(this, R.id.fl_support_menu_container);
