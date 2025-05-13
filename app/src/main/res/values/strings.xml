@@ -250,4 +250,7 @@
     <string name="error_no_email">Por favor ingrese su email</string>
     <string name="error_invalid_email">Por favor ingrese un email válido</string>
     <string name="error_acept_emails">Debe aceptar recibir emails para continuar</string>
+    <string name="recover_password_acept_emails">Acepto recibir emails de recuperación</string>
+    <string name="recover_password">Recuperar Contraseña</string>
+    <string name="recover_password_go_to_login">Volver a iniciar sesión</string>
 </resources>
