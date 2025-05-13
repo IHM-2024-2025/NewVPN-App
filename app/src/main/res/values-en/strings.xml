@@ -157,6 +157,7 @@
     <string name="country_japana">Japan</string>
     <string name="country_usa">USA</string>
     <string name="country_india">India</string>
+    <string name="terms_title">TandC</string>
     <string name="language_select_title">Select language</string>
     <string name="language_spanish">Spanish</string>
     <string name="legal_description_china">Legislation in China imposes special restrictions on the use of VPNs. Be sure to comply with local laws.</string>
@@ -195,4 +196,11 @@
     <string name="recover_password_acept_emails">I agree to receive recovery emails</string>
     <string name="recover_password">Recover password</string>
     <string name="recover_password_go_to_login">Back to Login</string>
+    <string name="go_back">"Return "</string>
+    <string name="faq_what_Is_vpn">A VPN (Virtual Private Network) encrypts your connection and hides your IP to enhance privacy, security and allow access to location-restricted content.</string>
+    <string name="faq_choose_country">Encryption and distance from the server can affect speed. To improve performance, choose a nearby server and use a stable connection.</string>
+    <string name="faq_what_we_do">Yes, it encrypts your connection to prevent attacks, but it does not replace an antivirus, so we recommend using both.</string>
+    <string name="faq_what_you_can_do">Yes, you can access streaming platforms and restricted sites by choosing a server in another country.</string>
+    <string name="faq_download_app">Download the app from the official shop, log in (if necessary) and select a server to connect with a single tap.</string>
+    <string name="faq_config_your_acount">You can manage your subscription from your account settings in the app or in the app shop.</string>
 </resources>
