@@ -260,4 +260,6 @@
     <string name="faq_what_you_can_do">Si, puedes acceder a plataformas de streaming y sitios restringidos eligiendo un servidor en otro país.</string>
     <string name="faq_download_app">Descarga la app desde la tienda oficial, inicia sesión (si es necesario) y selecciona un servidor para conectarte con un solo toque.</string>
     <string name="faq_config_your_acount">Puedes gestionar tu suscripción desde la configuración de tu cuenta en la app o en la tienda de aplicaciones.</string>
+    <string name="livechat_searching_operator">Estamos buscando un operador libre.</string>
+    <string name="livechat_wait">Por favor, mantengase a la espera.</string>
 </resources>
