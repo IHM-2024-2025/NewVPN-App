@@ -8,4 +8,6 @@
     <item name="cardPlan" type="id" />
     <item name="fl_info_userdata_header_container" type="id" />
     <item name="fl_info_userdata_menu_container" type="id" />
+    <item name="card_contact_info" type="id" />
+    <item name="card_contact_form" type="id" />
 </resources>
