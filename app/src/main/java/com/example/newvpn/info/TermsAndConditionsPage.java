@@ -46,7 +46,7 @@ public class TermsAndConditionsPage extends AppCompatActivity {
      */
     private void setupHeader() {
         try {
-            HeaderHelper.injectHeader(this, R.id.headerContainer, getString(R.string.register_terms_and_conditions));
+            HeaderHelper.injectHeader(this, R.id.headerContainer, getString(R.string.terms_title));
         } catch (Exception e) {
             // No terminamos la actividad ya que podemos seguir sin el header
             Toast.makeText(this, "Error al cargar el encabezado", Toast.LENGTH_SHORT).show();
