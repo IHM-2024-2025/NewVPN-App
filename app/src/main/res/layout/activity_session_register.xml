@@ -35,13 +35,14 @@
         <EditText
             android:id="@+id/pt_session_register_name"
             android:layout_width="157dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
             android:autofillHints="name"
+            android:background="#E0E0E0"
             android:ems="10"
-            android:hint="@string/register_country_label"
+            android:hint="@string/register_name_label"
             android:inputType="text"
-            android:text="@string/register_name_default" />
+            android:padding="8dp" />
     </LinearLayout>
 
     <!-- Campo Apellidos -->
@@ -66,13 +67,14 @@
         <EditText
             android:id="@+id/pt_session_register_lastname"
             android:layout_width="157dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
             android:autofillHints="familyName"
+            android:background="#E0E0E0"
             android:ems="10"
-            android:hint="@string/register_country_label"
+            android:hint="@string/register_surname_label"
             android:inputType="text"
-            android:text="@string/register_name_default" />
+            android:padding="8dp" />
     </LinearLayout>
 
     <!-- Campo Teléfono -->
@@ -97,11 +99,13 @@
         <EditText
             android:id="@+id/pt_session_register_tlf"
             android:layout_width="263dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:autofillHints="phone"
+            android:background="#E0E0E0"
             android:ems="10"
             android:hint="@string/register_phone_label"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:padding="8dp" />
     </LinearLayout>
 
     <!-- Campo Email -->
@@ -126,11 +130,13 @@
         <EditText
             android:id="@+id/pt_session_login_email"
             android:layout_width="263dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:autofillHints="emailAddress"
+            android:background="#E0E0E0"
             android:ems="10"
             android:hint="@string/login_email_label"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:padding="8dp" />
     </LinearLayout>
 
     <!-- Campo País -->
@@ -155,13 +161,14 @@
         <EditText
             android:id="@+id/pt_session_register_country"
             android:layout_width="157dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
             android:autofillHints="country"
+            android:background="#E0E0E0"
             android:ems="10"
             android:hint="@string/register_country_label"
             android:inputType="text"
-            android:text="@string/register_name_default" />
+            android:padding="8dp" />
     </LinearLayout>
 
     <!-- Campo Contraseña -->
@@ -186,11 +193,13 @@
         <EditText
             android:id="@+id/pt_session_register_password"
             android:layout_width="263dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:autofillHints="password"
+            android:background="#E0E0E0"
             android:ems="10"
             android:hint="@string/register_password_label"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:padding="8dp" />
     </LinearLayout>
 
     <!-- Campo Confirmar contraseña -->
@@ -215,11 +224,13 @@
         <EditText
             android:id="@+id/pt_session_register_confirm_password"
             android:layout_width="263dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:autofillHints="password"
+            android:background="#E0E0E0"
             android:ems="10"
             android:hint="@string/register_password_label"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:padding="8dp" />
     </LinearLayout>
 
     <!-- Términos y condiciones -->
@@ -253,8 +264,9 @@
     <Button
         android:id="@+id/bt_session_register_register"
         android:layout_width="222dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="@android:color/holo_green_light"
         android:text="@string/register_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
