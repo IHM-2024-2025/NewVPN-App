@@ -84,23 +84,19 @@
         <Button
             android:id="@+id/btn_pay_card"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
-            android:background="@drawable/color_green_rounded_63ff88"
-            android:text="@string/pay_card_button"
-            android:textColor="#000000" />
+            android:text="@string/pay_card_button" />
 
         <Button
             android:id="@+id/btn_pay_paypal"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:layout_marginStart="4dp"
             android:layout_weight="1"
             android:alpha="0.7"
-            android:background="@drawable/color_green_rounded_63ff88"
-            android:text="@string/pay_paypal_button"
-            android:textColor="#000000" />
+            android:text="@string/pay_paypal_button" />
     </LinearLayout>
 
     <!-- Contenedor para los formularios -->
@@ -228,12 +224,10 @@
     <Button
         android:id="@+id/btn_pay_submit"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/color_green_rounded_63ff88"
         android:text="@string/pay_button"
-        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll_pay_form_container" />
